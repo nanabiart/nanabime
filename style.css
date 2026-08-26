@@ -59,19 +59,22 @@ body {
   min-height: 280px;
 }
 
+/* PHOTO BOOTH (Centralização vertical perfeita em relação ao retângulo) */
 .photo-window {
-  width: 520px;
+  width: 500px;
   position: absolute;
-  left: -40px;
+  left: -35px;
   top: 50%;
-  transform: translateY(-50%) rotate(-3deg);
+  margin-top: calc(500px * -0.32); /* Ajuste exato baseado na altura da imagem para alinhar no centro */
+  transform: rotate(-3deg);
+  transform-origin: center center;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
   transition: transform 0.3s ease;
   z-index: 10;
 }
 
 .photo-window:hover {
-  transform: translateY(-50%) rotate(0deg) scale(1.02);
+  transform: rotate(0deg) scale(1.02);
 }
 
 .photo-window img {
@@ -80,7 +83,7 @@ body {
 }
 
 .bio-text {
-  margin-left: 500px;
+  margin-left: 480px;
   color: #e2dfd2;
   font-size: 1.25rem;
   line-height: 1.65;
@@ -105,12 +108,11 @@ body {
   font-family: var(--font-main);
   font-size: 2.8rem;
   font-weight: 400;
-  color: #a0a0a0; /* Cinza inicial */
+  color: #a0a0a0;
   cursor: pointer;
   transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
-/* Preto e destacado apenas no HOVER ou quando selecionado (ACTIVE) */
 .tab-btn:hover,
 .tab-btn.active {
   color: var(--text-dark);
@@ -130,13 +132,13 @@ body {
   display: block;
 }
 
-/* PORTFOLIO PILLS (Força 3 em cima e 2 embaixo) */
+/* PORTFOLIO PILLS (3 em cima e 2 embaixo) */
 .pills-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem 1.8rem;
-  max-width: 960px; /* Trava exatamente para quebrar na proporção 3-2 */
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -212,7 +214,7 @@ body {
 @media (max-width: 1440px) {
   .hero h1 { font-size: 3.8rem; }
   .tab-btn { font-size: 2.2rem; }
-  .photo-window { width: 420px; }
+  .photo-window { width: 420px; margin-top: calc(420px * -0.32); }
   .bio-text { margin-left: 400px; font-size: 1.1rem; }
   .pill-btn { font-size: 1.1rem; padding: 1rem 2.5rem; }
   .pills-grid { max-width: 800px; }
@@ -228,9 +230,12 @@ body {
     position: relative;
     left: 0;
     top: 0;
-    transform: none;
-    margin: -50px auto 2rem auto;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
     width: 280px;
+    transform: none;
   }
 
   .photo-window:hover {
