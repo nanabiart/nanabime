@@ -14,11 +14,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   font-family: var(--font-main);
   background-color: var(--bg-color);
@@ -33,7 +28,6 @@ body {
 .hero {
   text-align: center;
   padding-top: 4rem;
-  padding-bottom: 3.5rem;
   width: 100%;
 }
 
@@ -45,35 +39,34 @@ body {
 
 .hero .subtitle {
   color: var(--text-muted);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   margin-top: 0.3rem;
+  margin-bottom: 4rem;
 }
 
-/* FAIXA ESCURA (LARGURA TOTAL DA TELA) */
-.banner-dark-wrapper {
+/* CONTAINER CENTRADO (MANTÉM O CARD COM MARGENS) */
+.banner-container {
   width: 100%;
-  background-color: var(--dark-banner);
-  position: relative;
-  min-height: 280px;
-  display: flex;
-  align-items: center;
-}
-
-.banner-inner {
-  width: 100%;
-  max-width: 1300px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 3.5rem 2rem;
-  position: relative;
-  display: flex;
-  align-items: center;
+  padding: 0 3rem; /* Espaço nas laterais da tela */
 }
 
-/* PHOTO BOOTH */
+.banner-dark-card {
+  background-color: var(--dark-banner);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 3.5rem 5rem;
+  position: relative;
+  min-height: 260px;
+}
+
+/* PHOTO BOOTH OVERLAY */
 .photo-window {
-  width: 480px;
+  width: 440px;
   position: absolute;
-  left: -10px;
+  left: -40px; /* Sai levemente da borda esquerda do card */
   top: 50%;
   transform: translateY(-50%) rotate(-3deg);
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.35));
@@ -90,11 +83,11 @@ body {
   display: block;
 }
 
-/* BIO TEXT (Texto claro visível sobre fundo escuro) */
+/* BIO TEXT */
 .bio-text {
-  margin-left: 480px;
+  margin-left: 420px;
   color: #e2dfd2;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.65;
   text-align: left;
   max-width: 720px;
@@ -104,7 +97,7 @@ body {
   margin-top: 1.2rem;
 }
 
-/* TAB NAV */
+/* TAB NAV (Botões cinzas por padrão) */
 .tab-nav {
   display: flex;
   justify-content: center;
@@ -146,13 +139,13 @@ body {
   display: block;
 }
 
-/* PORTFOLIO PILLS (Força 3 em cima e 2 embaixo) */
+/* PORTFOLIO PILLS (3 em cima e 2 embaixo) */
 .pills-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.4rem 1.6rem;
-  max-width: 900px; /* Alinhado para quebrar 3 e 2 */
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -241,17 +234,17 @@ body {
 @media (max-width: 1440px) {
   .hero h1 { font-size: 3.8rem; }
   .tab-btn { font-size: 2.2rem; }
-  .photo-window { width: 400px; left: 10px; }
-  .bio-text { margin-left: 420px; font-size: 1rem; }
+  .photo-window { width: 380px; left: -20px; }
+  .bio-text { margin-left: 380px; font-size: 1rem; }
   .pill-btn { font-size: 1.05rem; padding: 1rem 2.4rem; }
 }
 
 @media (max-width: 768px) {
-  .banner-dark-wrapper {
-    min-height: auto;
+  .banner-container {
+    padding: 0 1.5rem;
   }
 
-  .banner-inner {
+  .banner-dark-card {
     flex-direction: column;
     padding: 2.5rem 1.5rem;
   }
