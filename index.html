@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nanabi</title>
+  <title>nanabi — creative designer</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,38 +11,38 @@
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <header class="hero">
-    <h1>nanabi</h1>
-    <p class="subtitle">strategic designer</p>
-  </header>
+    <h1>Hi, nanabi</h1>
+    <p class="subtitle">creative designer</p>
 
-  <!-- BANNER CONTAINER -->
-  <section class="banner-container">
-    <div class="banner-dark-card">
-      <div class="photo-window">
-        <img src="FOTO.png" alt="nanabi photo booth">
-      </div>
-      <div class="bio-text">
-        <p>Atuo com foco em performance, branding, CRM e UX, aplicando design estratégico em websites, mídias digitais, peças criativas e soluções que conectam estética e resultado.</p>
-        <p>Projetos visuais e estratégicos desenvolvidos para marcas e ambientes digitais.</p>
+    <!-- BANNER CARD CENTRADO -->
+    <div class="banner-container">
+      <div class="banner-dark-card">
+        <div class="photo-window">
+          <img src="FOTO1.png" alt="Ana Beatriz — Photo Booth">
+        </div>
+        <div class="bio-text">
+          <p>I'm Ana Beatriz, a designer focused on creating visual solutions that connect concept, culture, performance and experience.</p>
+          <p>My work moves across art direction, digital design and branding, exploring visual languages to turn ideas into meaningful narratives and impactful results.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- TAB NAV -->
+  <!-- NAVIGATION TABS -->
   <nav class="tab-nav">
     <button class="tab-btn active" onclick="switchTab('all')">YOU FOUND NANABI</button>
     <button class="tab-btn" onclick="switchTab('specialties')">SPECIALTIES</button>
-    <button class="tab-btn" onclick="switchTab('about')">ABOUT</button>
-    <button class="tab-btn" onclick="switchTab('contact')">CONTACT</button>
+    <button class="tab-btn" onclick="switchTab('about')">about</button>
+    <button class="tab-btn" onclick="switchTab('contact')">contact</button>
   </nav>
 
-  <!-- CONTENT AREA -->
+  <!-- CONTENT SECTIONS -->
   <main class="content-area">
 
-    <!-- TAB: YOU FOUND NANABI -->
-    <div id="all" class="tab-content active">
+    <!-- TAB: YOU FOUND NANABI (TODOS OS 16 PROJETOS) -->
+    <section id="all" class="tab-content active">
       <div class="projects-grid">
 
         <!-- ART DIRECTION -->
@@ -170,10 +170,10 @@
         </div>
 
       </div>
-    </div>
+    </section>
 
-    <!-- TAB: SPECIALTIES -->
-    <div id="specialties" class="tab-content">
+    <!-- SPECIALTIES TAB (PÍLULAS) -->
+    <section id="specialties" class="tab-content">
       <div class="pills-grid">
         <a href="art-direction.html" class="pill-btn">Art Direction</a>
         <a href="crm.html" class="pill-btn">CRM</a>
@@ -182,32 +182,37 @@
         <a href="social-media.html" class="pill-btn">Social Media</a>
         <a href="ooh.html" class="pill-btn">OOH</a>
       </div>
-    </div>
+    </section>
 
-    <!-- TAB: ABOUT -->
-    <div id="about" class="tab-content">
+    <!-- ABOUT TAB -->
+    <section id="about" class="tab-content">
       <div class="about-text">
-        <p>Atuo com foco em performance, branding, CRM e UX, aplicando design estratégico em websites, mídias digitais, peças criativas e soluções que conectam estética e resultado.</p>
-        <p>Especialista em desdobramento visual e consistência de marca para ambientes digitais.</p>
+        <p>Based in Rio de Janeiro, Brazil, with a degree in Advertising and experience in digital communication and creative projects, I've worked across digital and offline environments, developing visual solutions for brands across different touchpoints.</p>
+        <p>My approach combines aesthetics, strategy, and performance, always considering how design can strengthen brands and create meaningful experiences.</p>
+        <p>I'm constantly learning, exploring new trends, and developing my technical and interpersonal skills. My favorite quality is curiosity; I believe it keeps me moving forward, pushing me to explore, learn, and go further.</p>
       </div>
-    </div>
+    </section>
 
-    <!-- TAB: CONTACT -->
-    <div id="contact" class="tab-content">
+    <!-- CONTACT TAB -->
+    <section id="contact" class="tab-content">
       <div class="contact-box">
-        <a href="mailto:contato@nanabi.art">
-          <img src="E-MAIL.png" alt="Email contact" class="email-img">
+        <a href="mailto:nanabiart@gmail.com" class="email-link">
+          <img src="E-MAIL.png" alt="nanabiart@gmail.com" class="email-img">
         </a>
         <div class="social-buttons">
-          <a href="https://linkedin.com" target="_blank"><img src="LINKEDIN.png" alt="LinkedIn" class="social-btn-img"></a>
-          <a href="https://behance.net" target="_blank"><img src="BEHANCE.png" alt="Behance" class="social-btn-img"></a>
+          <a href="https://www.linkedin.com/in/nanabi/" target="_blank" rel="noopener noreferrer">
+            <img src="LINKEDIN.png" alt="LinkedIn" class="social-btn-img">
+          </a>
+          <a href="https://www.behance.net/nanabiart" target="_blank" rel="noopener noreferrer">
+            <img src="BEHANCE.png" alt="Behance" class="social-btn-img">
+          </a>
         </div>
       </div>
-    </div>
+    </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER COPYRIGHT -->
   <footer class="site-footer">
     <p>© 2026 nanabi</p>
   </footer>
