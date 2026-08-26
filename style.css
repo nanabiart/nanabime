@@ -63,12 +63,12 @@ body {
   min-height: 280px;
 }
 
-/* PHOTO BOOTH OVERLAY (Subida mais para cima) */
+/* PHOTO BOOTH OVERLAY */
 .photo-window {
   width: 500px;
   position: absolute;
   left: -50px;
-  top: 42%; /* Elevado de 50% para 42% para projetar mais para cima */
+  top: 42%;
   transform: translateY(-50%) rotate(-3.5deg);
   transform-origin: center center;
   filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.35));
@@ -85,21 +85,21 @@ body {
   display: block;
 }
 
-/* BIO TEXT */
+/* BIO TEXT (Padronizado para 1.15rem e line-height 1.75) */
 .bio-text {
   margin-left: 440px;
   color: #e2dfd2;
-  font-size: 1.05rem;
-  line-height: 1.65;
+  font-size: 1.15rem;
+  line-height: 1.75;
   text-align: left;
-  max-width: 700px;
+  max-width: 720px;
 }
 
 .bio-text p + p {
   margin-top: 1.2rem;
 }
 
-/* TAB NAV (Todas as abas em cinza por padrão) */
+/* TAB NAV */
 .tab-nav {
   display: flex;
   justify-content: center;
@@ -113,12 +113,11 @@ body {
   font-family: var(--font-main);
   font-size: 2.6rem;
   font-weight: 400;
-  color: #a0a0a0; /* Cinza inicial para portfolio, about e contact */
+  color: #a0a0a0;
   cursor: pointer;
   transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
-/* Fica preto apenas com a interação do hover ou na seleção */
 .tab-btn:hover,
 .tab-btn.active {
   color: var(--text-dark);
@@ -142,7 +141,7 @@ body {
   display: block;
 }
 
-/* PORTFOLIO PILLS (Com 6 pílulas: 3 em cima e 3 embaixo) */
+/* PORTFOLIO PILLS */
 .pills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -169,10 +168,10 @@ body {
   transform: translateY(-3px);
 }
 
-/* ABOUT SECTION */
+/* ABOUT SECTION (Padronizado com o mesmo tamanho da bio) */
 .about-text {
   font-size: 1.15rem;
-  line-height: 1.8;
+  line-height: 1.75;
   color: var(--text-dark);
   text-align: center;
   max-width: 820px;
@@ -189,7 +188,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.5rem;
+  gap: 3rem;
 }
 
 .email-img {
@@ -203,20 +202,21 @@ body {
   transform: translateY(-2px);
 }
 
-.social-wrapper {
-  position: relative;
-  display: inline-block;
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-.social-img {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
+.social-btn-img {
+  height: 48px;
+  width: auto;
   transition: transform 0.2s ease;
 }
 
-.social-img:hover {
-  transform: scale(1.05);
+.social-btn-img:hover {
+  transform: scale(1.08);
 }
 
 /* FOOTER COPYRIGHT */
@@ -238,7 +238,8 @@ body {
   .hero h1 { font-size: 3.8rem; }
   .tab-btn { font-size: 2.2rem; }
   .photo-window { width: 440px; left: -35px; top: 40%; }
-  .bio-text { margin-left: 390px; font-size: 1rem; }
+  .bio-text { margin-left: 390px; font-size: 1.05rem; }
+  .about-text { font-size: 1.05rem; }
   .pill-btn { font-size: 1.05rem; padding: 1rem 2.4rem; }
   .pills-grid { max-width: 820px; }
 }
@@ -266,7 +267,7 @@ body {
     transform: scale(1.02);
   }
 
-  .bio-text {
+  .bio-text, .about-text {
     margin-left: 0;
     font-size: 0.95rem;
     text-align: center;
