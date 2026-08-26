@@ -51,6 +51,7 @@ body {
   margin: 0 auto;
   padding: 0 3rem;
   position: relative;
+  margin-bottom: 2rem; /* Espaço extra para evitar colisão na parte inferior */
 }
 
 .banner-dark-card {
@@ -68,24 +69,26 @@ body {
   width: 500px;
   position: absolute;
   left: -50px;
-  top: 42%;
+  top: 40%;
   transform: translateY(-50%) rotate(-3.5deg);
   transform-origin: center center;
   filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.35));
   transition: transform 0.3s ease;
-  z-index: 20;
+  z-index: 10;
+  pointer-events: none; /* Permite clicar nos botões mesmo se a caixa da imagem sobrepor */
+}
+
+.photo-window img {
+  width: 100%;
+  display: block;
+  pointer-events: auto; /* Mantém o efeito interativo direto na foto se necessário */
 }
 
 .photo-window:hover {
   transform: translateY(-50%) rotate(0deg) scale(1.02);
 }
 
-.photo-window img {
-  width: 100%;
-  display: block;
-}
-
-/* BIO TEXT (Padronizado para 1.15rem e line-height 1.75) */
+/* BIO TEXT */
 .bio-text {
   margin-left: 440px;
   color: #e2dfd2;
@@ -99,12 +102,14 @@ body {
   margin-top: 1.2rem;
 }
 
-/* TAB NAV */
+/* TAB NAV (Garante prioridade máxima de clique) */
 .tab-nav {
   display: flex;
   justify-content: center;
   gap: 4.5rem;
-  margin: 6rem 0 4.5rem 0;
+  margin: 5rem 0 4.5rem 0;
+  position: relative;
+  z-index: 30; /* Fica acima da foto e das sombras */
 }
 
 .tab-btn {
@@ -116,6 +121,8 @@ body {
   color: #a0a0a0;
   cursor: pointer;
   transition: color 0.2s ease, font-weight 0.2s ease;
+  position: relative;
+  z-index: 35;
 }
 
 .tab-btn:hover,
@@ -168,7 +175,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* ABOUT SECTION (Padronizado com o mesmo tamanho da bio) */
+/* ABOUT SECTION */
 .about-text {
   font-size: 1.15rem;
   line-height: 1.75;
@@ -237,7 +244,7 @@ body {
 @media (max-width: 1440px) {
   .hero h1 { font-size: 3.8rem; }
   .tab-btn { font-size: 2.2rem; }
-  .photo-window { width: 440px; left: -35px; top: 40%; }
+  .photo-window { width: 440px; left: -35px; top: 38%; }
   .bio-text { margin-left: 390px; font-size: 1.05rem; }
   .about-text { font-size: 1.05rem; }
   .pill-btn { font-size: 1.05rem; padding: 1rem 2.4rem; }
@@ -247,6 +254,7 @@ body {
 @media (max-width: 768px) {
   .banner-container {
     padding: 0 1.5rem;
+    margin-bottom: 0;
   }
 
   .banner-dark-card {
@@ -261,6 +269,7 @@ body {
     transform: none;
     margin: -40px auto 2rem auto;
     width: 280px;
+    pointer-events: auto;
   }
 
   .photo-window:hover {
