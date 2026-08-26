@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nanabi — creative designer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <h1>Hi, nanabi</h1>
+    <p class="subtitle">creative designer</p>
+
+    <div class="banner-container">
+      <div class="banner-dark">
+        <div class="photo-window">
+          <img src="FOTO.jpg" alt="Ana Beatriz — Photo Booth">
+        </div>
+        <div class="bio-text">
+          <p>I'm Ana Beatriz, a designer focused on creating visual solutions that connect concept, culture, performance and experience.</p>
+          <p>My work moves across art direction, digital design and branding, exploring visual languages to turn ideas into meaningful narratives and impactful results.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION TABS -->
+  <nav class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('portfolio')">portfolio</button>
+    <button class="tab-btn" onclick="switchTab('about')">about</button>
+    <button class="tab-btn" onclick="switchTab('contact')">contact</button>
+  </nav>
+
+  <!-- CONTENT SECTIONS -->
+  <main class="content-area">
+
+    <!-- PORTFOLIO TAB -->
+    <section id="portfolio" class="tab-content active">
+      <div class="pills-grid">
+        <a href="art-direction.html" class="pill-btn">Art Direction</a>
+        <a href="crm.html" class="pill-btn">CRM</a>
+        <a href="digital-campaigns.html" class="pill-btn">Digital Campaigns</a>
+        <a href="ui-design.html" class="pill-btn">UI Design</a>
+        <a href="social-media.html" class="pill-btn">Social Media</a>
+      </div>
+    </section>
+
+    <!-- ABOUT TAB -->
+    <section id="about" class="tab-content">
+      <div class="about-text">
+        <p>Based in Rio de Janeiro, Brazil, with a degree in Advertising and experience in digital communication and creative projects, I've worked across digital and offline environments, developing visual solutions for brands across different touchpoints.</p>
+        <p>My approach combines aesthetics, strategy and performance, always considering how design can strengthen brands and create meaningful experiences.</p>
+        <p>I'm constantly learning, exploring new trends, developing my technical and interpersonal skills. My favorite quality is curiosity — I believe it keeps me moving forward, pushing me to explore, learn, and go further.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT TAB -->
+    <section id="contact" class="tab-content">
+      <div class="contact-box">
+        <a href="mailto:nanabiart@gmail.com" class="email-link">
+          <img src="E-MAIL.png" alt="nanabiart@gmail.com" class="email-img">
+        </a>
+        <div class="social-wrapper">
+          <img src="SOCIAIS.svg" alt="Social Media Links" class="social-img">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
