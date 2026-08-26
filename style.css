@@ -19,53 +19,62 @@ body {
   background-color: var(--bg-color);
   color: var(--text-dark);
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 8rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HERO */
 .hero {
   text-align: center;
   padding-top: 4rem;
+  width: 100%;
 }
 
 .hero h1 {
-  font-size: 4.8rem;
+  font-size: 4.2rem;
   font-weight: 500;
   letter-spacing: -0.02em;
 }
 
 .hero .subtitle {
   color: var(--text-muted);
-  font-size: 1.4rem;
-  margin-top: 0.4rem;
-  margin-bottom: 4.5rem;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  margin-bottom: 4rem;
 }
 
-/* BANNER & PHOTO BOOTH CONTAINER */
-.banner-container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.banner-dark {
+/* BANNER FULL WIDTH (Preenche 100% da largura da tela) */
+.banner-dark-full {
+  width: 100vw;
   background-color: var(--dark-banner);
-  border-radius: 6px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 260px;
   display: flex;
   align-items: center;
-  padding: 4rem 6rem;
-  position: relative;
-  min-height: 280px;
 }
 
-/* PHOTO BOOTH (Centralização vertical perfeita em relação ao retângulo) */
+.banner-content {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* PHOTO BOOTH */
 .photo-window {
-  width: 500px;
+  width: 480px;
   position: absolute;
-  left: -35px;
+  left: -10px;
   top: 50%;
-  margin-top: calc(500px * -0.32); /* Ajuste exato baseado na altura da imagem para alinhar no centro */
+  margin-top: calc(480px * -0.32);
   transform: rotate(-3deg);
   transform-origin: center center;
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
@@ -82,31 +91,33 @@ body {
   display: block;
 }
 
+/* BIO TEXT */
 .bio-text {
   margin-left: 480px;
   color: #e2dfd2;
-  font-size: 1.25rem;
-  line-height: 1.65;
+  font-size: 1.05rem;
+  line-height: 1.6;
   text-align: left;
+  max-width: 720px;
 }
 
 .bio-text p + p {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
 }
 
-/* TAB NAV (Todos os botões cinzas por padrão) */
+/* TAB NAV */
 .tab-nav {
   display: flex;
   justify-content: center;
   gap: 4.5rem;
-  margin: 6rem 0 4.5rem 0;
+  margin: 5.5rem 0 4rem 0;
 }
 
 .tab-btn {
   background: none;
   border: none;
   font-family: var(--font-main);
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: #a0a0a0;
   cursor: pointer;
@@ -120,6 +131,10 @@ body {
 }
 
 /* TABS CONTENT */
+.content-area {
+  flex: 1;
+}
+
 .tab-content {
   display: none;
   max-width: 1100px;
@@ -137,18 +152,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem 1.8rem;
-  max-width: 960px;
+  gap: 1.4rem 1.6rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .pill-btn {
   background-color: var(--pill-bg);
   color: #ffffff;
-  padding: 1.2rem 3rem;
+  padding: 1.1rem 2.8rem;
   border-radius: 60px;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 500;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -161,30 +176,29 @@ body {
 
 /* ABOUT SECTION */
 .about-text {
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.75;
   color: var(--text-dark);
   text-align: center;
-  max-width: 900px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
 .about-text p + p {
-  margin-top: 2rem;
+  margin-top: 1.8rem;
 }
 
 /* CONTACT SECTION */
 .contact-box {
-  margin-top: 6rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
-  padding-bottom: 4rem;
+  gap: 3.5rem;
 }
 
 .email-img {
-  max-width: 580px;
+  max-width: 520px;
   width: 100%;
   height: auto;
   transition: transform 0.2s ease;
@@ -200,7 +214,7 @@ body {
 }
 
 .social-img {
-  max-width: 220px;
+  max-width: 200px;
   width: 100%;
   height: auto;
   transition: transform 0.2s ease;
@@ -210,18 +224,35 @@ body {
   transform: scale(1.05);
 }
 
+/* FOOTER COPYRIGHT */
+.site-footer {
+  text-align: center;
+  padding: 5rem 0 2.5rem 0;
+}
+
+.site-footer p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
 /* RESPONSIVO AUTOMÁTICO */
 @media (max-width: 1440px) {
-  .hero h1 { font-size: 3.8rem; }
-  .tab-btn { font-size: 2.2rem; }
-  .photo-window { width: 420px; margin-top: calc(420px * -0.32); }
-  .bio-text { margin-left: 400px; font-size: 1.1rem; }
-  .pill-btn { font-size: 1.1rem; padding: 1rem 2.5rem; }
-  .pills-grid { max-width: 800px; }
+  .hero h1 { font-size: 3.5rem; }
+  .tab-btn { font-size: 2.1rem; }
+  .photo-window { width: 400px; margin-top: calc(400px * -0.32); left: 10px; }
+  .bio-text { margin-left: 420px; font-size: 0.98rem; }
+  .pill-btn { font-size: 1rem; padding: 0.95rem 2.4rem; }
+  .pills-grid { max-width: 760px; }
 }
 
 @media (max-width: 768px) {
-  .banner-dark {
+  .banner-dark-full {
+    min-height: auto;
+  }
+
+  .banner-content {
     flex-direction: column;
     padding: 2.5rem 1.5rem;
   }
@@ -244,7 +275,8 @@ body {
 
   .bio-text {
     margin-left: 0;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    text-align: center;
   }
 
   .tab-nav {
@@ -252,6 +284,6 @@ body {
   }
 
   .tab-btn {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
