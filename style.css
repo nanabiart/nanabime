@@ -51,7 +51,7 @@ body {
   margin: 0 auto;
   padding: 0 3rem;
   position: relative;
-  margin-bottom: 2rem; /* Espaço extra para evitar colisão na parte inferior */
+  margin-bottom: 2rem;
 }
 
 .banner-dark-card {
@@ -75,13 +75,13 @@ body {
   filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.35));
   transition: transform 0.3s ease;
   z-index: 10;
-  pointer-events: none; /* Permite clicar nos botões mesmo se a caixa da imagem sobrepor */
+  pointer-events: none;
 }
 
 .photo-window img {
   width: 100%;
   display: block;
-  pointer-events: auto; /* Mantém o efeito interativo direto na foto se necessário */
+  pointer-events: auto;
 }
 
 .photo-window:hover {
@@ -102,14 +102,14 @@ body {
   margin-top: 1.2rem;
 }
 
-/* TAB NAV (Garante prioridade máxima de clique) */
+/* TAB NAV */
 .tab-nav {
   display: flex;
   justify-content: center;
   gap: 4.5rem;
   margin: 5rem 0 4.5rem 0;
   position: relative;
-  z-index: 30; /* Fica acima da foto e das sombras */
+  z-index: 30;
 }
 
 .tab-btn {
@@ -226,6 +226,87 @@ body {
   transform: scale(1.08);
 }
 
+/* CATEGORY PAGES & GALLERY GRID (Estilo Behance) */
+.project-header {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 4rem 3rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--text-dark);
+}
+
+.category-title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.gallery-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  width: 100%;
+  flex: 1;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem 2.5rem;
+}
+
+.project-card {
+  text-decoration: none;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .card-thumb img {
+  transform: scale(1.04);
+}
+
+.card-info h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.card-info p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
 /* FOOTER COPYRIGHT */
 .site-footer {
   text-align: center;
@@ -245,8 +326,7 @@ body {
   .hero h1 { font-size: 3.8rem; }
   .tab-btn { font-size: 2.2rem; }
   .photo-window { width: 440px; left: -35px; top: 38%; }
-  .bio-text { margin-left: 390px; font-size: 1.05rem; }
-  .about-text { font-size: 1.05rem; }
+  .bio-text, .about-text { font-size: 1.05rem; }
   .pill-btn { font-size: 1.05rem; padding: 1rem 2.4rem; }
   .pills-grid { max-width: 820px; }
 }
@@ -293,5 +373,18 @@ body {
   .pills-grid {
     flex-direction: column;
     align-items: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header, .gallery-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .category-title {
+    font-size: 2.2rem;
   }
 }
