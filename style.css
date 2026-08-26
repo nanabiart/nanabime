@@ -22,6 +22,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; /* Evita rolagem horizontal indesejada no mobile */
 }
 
 /* HERO */
@@ -48,10 +49,9 @@ body {
 .banner-container {
   width: 100%;
   max-width: 1320px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   padding: 0 3rem;
   position: relative;
-  margin-bottom: 2rem;
 }
 
 .banner-dark-card {
@@ -226,7 +226,7 @@ body {
   transform: scale(1.08);
 }
 
-/* CATEGORY PAGES & GALLERY GRID (Estilo Behance) */
+/* GALERIAS E INTERNAS */
 .project-header {
   max-width: 1320px;
   margin: 0 auto;
@@ -321,25 +321,30 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* RESPONSIVO AUTOMÁTICO */
-@media (max-width: 1440px) {
-  .hero h1 { font-size: 3.8rem; }
+/* REGRAS RESPONSIVAS (TABLET E MOBILE) */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 3.5rem; }
   .tab-btn { font-size: 2.2rem; }
-  .photo-window { width: 440px; left: -35px; top: 38%; }
-  .bio-text, .about-text { font-size: 1.05rem; }
-  .pill-btn { font-size: 1.05rem; padding: 1rem 2.4rem; }
-  .pills-grid { max-width: 820px; }
+  .photo-window { width: 400px; left: -20px; top: 40%; }
+  .bio-text { margin-left: 350px; font-size: 1rem; }
+  .about-text { font-size: 1.05rem; }
+  .pill-btn { font-size: 1.05rem; padding: 1rem 2.2rem; }
 }
 
 @media (max-width: 768px) {
+  .hero { padding-top: 2.5rem; }
+  .hero h1 { font-size: 2.8rem; }
+  .hero .subtitle { font-size: 1.1rem; margin-bottom: 2.5rem; }
+
   .banner-container {
-    padding: 0 1.5rem;
-    margin-bottom: 0;
+    padding: 0 1.25rem;
+    margin-bottom: 1rem;
   }
 
   .banner-dark-card {
     flex-direction: column;
     padding: 2.5rem 1.5rem;
+    min-height: auto;
   }
 
   .photo-window {
@@ -347,8 +352,9 @@ body {
     left: 0;
     top: 0;
     transform: none;
-    margin: -40px auto 2rem auto;
-    width: 280px;
+    margin: -50px auto 1.5rem auto;
+    width: 100%;
+    max-width: 300px;
     pointer-events: auto;
   }
 
@@ -356,35 +362,72 @@ body {
     transform: scale(1.02);
   }
 
-  .bio-text, .about-text {
+  .bio-text {
     margin-left: 0;
-    font-size: 0.95rem;
+    font-size: 1rem;
     text-align: center;
+    line-height: 1.6;
   }
 
   .tab-nav {
-    gap: 2rem;
+    gap: 1.8rem;
+    margin: 3rem 0 2.5rem 0;
   }
 
   .tab-btn {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+
+  .tab-content {
+    padding: 0 1.25rem;
   }
 
   .pills-grid {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .pill-btn {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .contact-box {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  .social-buttons {
+    gap: 1.5rem;
+  }
+
+  .social-btn-img {
+    height: 40px;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .project-header, .gallery-container {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .category-title {
     font-size: 2.2rem;
+  }
+
+  .site-footer {
+    padding: 4rem 0 2rem 0;
   }
 }
