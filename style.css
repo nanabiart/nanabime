@@ -22,7 +22,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; /* Evita rolagem horizontal indesejada no mobile */
+  overflow-x: hidden;
 }
 
 /* HERO */
@@ -33,7 +33,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem; /* Reduzido de 4.5rem */
   font-weight: 500;
   letter-spacing: -0.02em;
 }
@@ -116,13 +116,14 @@ body {
   background: none;
   border: none;
   font-family: var(--font-main);
-  font-size: 2.6rem;
+  font-size: 2rem; /* Reduzido de 2.6rem */
   font-weight: 400;
   color: #a0a0a0;
   cursor: pointer;
   transition: color 0.2s ease, font-weight 0.2s ease;
   position: relative;
   z-index: 35;
+  text-transform: lowercase;
 }
 
 .tab-btn:hover,
@@ -323,8 +324,8 @@ body {
 
 /* REGRAS RESPONSIVAS (TABLET E MOBILE) */
 @media (max-width: 1024px) {
-  .hero h1 { font-size: 3.5rem; }
-  .tab-btn { font-size: 2.2rem; }
+  .hero h1 { font-size: 2.8rem; }
+  .tab-btn { font-size: 1.8rem; }
   .photo-window { width: 400px; left: -20px; top: 40%; }
   .bio-text { margin-left: 350px; font-size: 1rem; }
   .about-text { font-size: 1.05rem; }
@@ -333,7 +334,7 @@ body {
 
 @media (max-width: 768px) {
   .hero { padding-top: 2.5rem; }
-  .hero h1 { font-size: 2.8rem; }
+  .hero h1 { font-size: 2.2rem; }
   .hero .subtitle { font-size: 1.1rem; margin-bottom: 2.5rem; }
 
   .banner-container {
@@ -375,7 +376,7 @@ body {
   }
 
   .tab-btn {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .tab-content {
