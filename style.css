@@ -342,17 +342,19 @@ body {
   padding: 1rem;
 }
 
-/* 1. LAYOUT DA HOME (TEXTO ABAIXO DA MÍDIA) */
+/* 1. LAYOUT DA HOME (TEXTO ABAIXO DA MÍDIA - ENCAIXE JUSTO E COMPACTO) */
 .modal-card.modal-home {
   width: fit-content;
   max-width: 90vw;
-  height: 88vh;
+  height: auto;           /* Ajuste automático para eliminar o espaço em branco */
+  max-height: 88vh;
   display: flex;
   flex-direction: column;
 }
 
 .modal-card.modal-home .modal-media-scroll {
-  flex: 1;
+  flex: initial;          /* Impede o esticamento vertical forçado */
+  max-height: 70vh;       /* Permite scroll em mídias longas */
   overflow-y: auto;
   background-color: #ffffff;
 }
