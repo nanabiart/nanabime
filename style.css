@@ -308,7 +308,11 @@ body {
   margin-top: 0.2rem;
 }
 
-/* MODAL DE VISUALIZAÇÃO (OVERLAY TRANSLÚCIDO) */
+/* ===================================================
+   MODAIS DE VISUALIZAÇÃO (ESTILOS E ESTRUTURAS)
+   =================================================== */
+
+/* OVERLAY TRANSLÚCIDO COM BLUR */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -329,56 +333,83 @@ body {
   display: flex;
 }
 
-/* CARD COM LAYOUT EDITORIAL LADO A LADO */
+/* BASE COMUM DO CARD */
 .modal-card {
   background-color: #ffffff;
-  width: fit-content;
-  max-width: 90vw;
-  height: 88vh;
   border-radius: 12px;
-  display: flex;
-  flex-direction: row; /* Coloca a mídia à esquerda e o texto à direita */
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
   padding: 1rem;
-  gap: 1.5rem;
 }
 
-/* ÁREA DE MÍDIAS (ROLAGEM INTERNA EXCLUSIVA) */
-.modal-media-scroll {
+/* 1. LAYOUT DA HOME (TEXTO ABAIXO DA MÍDIA, CAIXA VERTICAL COMPACTA) */
+.modal-card.modal-home {
+  width: fit-content;
+  max-width: 90vw;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-card.modal-home .modal-media-scroll {
   flex: 1;
   overflow-y: auto;
   background-color: #ffffff;
-  height: 100%;
 }
 
-.modal-media-scroll img,
-.modal-media-scroll video {
+.modal-card.modal-home .modal-media-scroll img,
+.modal-card.modal-home .modal-media-scroll video {
   width: 100%;
   max-width: 680px;
   height: auto;
   display: block;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-.modal-media-scroll img + img,
-.modal-media-scroll img + video,
-.modal-media-scroll video + img,
-.modal-media-scroll video + video {
-  margin-top: 1rem;
+.modal-fixed-footer {
+  background-color: #ffffff;
+  padding: 1.2rem 0.5rem 0.4rem 0.5rem;
 }
 
-/* Barra de rolagem discreta */
-.modal-media-scroll::-webkit-scrollbar {
-  width: 4px;
+.modal-fixed-footer h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.2;
 }
 
-.modal-media-scroll::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
+.modal-fixed-footer p {
+  font-size: 0.9rem;
+  color: #555555;
+  margin-top: 0.2rem;
+  line-height: 1.4;
 }
 
-/* PAINEL FIXO DE TEXTO (COLUNA DIREITA) */
+/* 2. LAYOUT DAS ESPECIALIDADES (ESTILO SPLIT / SIDEBAR FIXA À DIREITA) */
+.modal-card.modal-sidebar {
+  width: fit-content;
+  max-width: 90vw;
+  height: 88vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.modal-card.modal-sidebar .modal-media-scroll {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.modal-card.modal-sidebar .modal-media-scroll img,
+.modal-card.modal-sidebar .modal-media-scroll video {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
 .modal-fixed-sidebar {
   width: 280px;
   flex-shrink: 0;
@@ -387,7 +418,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-content: flex-start;
 }
 
 .modal-fixed-sidebar h3 {
@@ -395,14 +425,22 @@ body {
   font-weight: 700;
   color: #111111;
   line-height: 1.3;
-  letter-spacing: -0.01em;
 }
 
 .modal-fixed-sidebar p {
   font-size: 0.9rem;
   color: #444444;
   line-height: 1.55;
-  word-break: break-word;
+}
+
+/* BARRA DE ROLAGEM DISCRETA NAS MÍDIAS */
+.modal-media-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-media-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
 }
 
 /* FOOTER COPYRIGHT */
@@ -529,33 +567,20 @@ body {
     padding: 1rem;
   }
 
-  /* NO MOBILE: EMPILHA A MÍDIA NO TOPO E O TEXTO EMBAIXO */
-  .modal-card {
+  .modal-card.modal-home,
+  .modal-card.modal-sidebar {
     flex-direction: column;
     width: 100%;
     max-width: 100%;
     height: 85vh;
     padding: 0.8rem;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
-  .modal-media-scroll img,
-  .modal-media-scroll video {
-    max-width: 100%;
-  }
-
-  .modal-fixed-sidebar {
+  .modal-card.modal-sidebar .modal-fixed-sidebar {
     width: 100%;
-    padding: 0.5rem 0.2rem;
-    gap: 0.4rem;
-  }
-
-  .modal-fixed-sidebar h3 {
-    font-size: 1rem;
-  }
-
-  .modal-fixed-sidebar p {
-    font-size: 0.85rem;
+    padding: 0.4rem 0.2rem;
+    gap: 0.3rem;
   }
 
   .site-footer {
