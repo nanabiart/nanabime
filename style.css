@@ -33,7 +33,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem; /* Reduzido de 4.5rem */
+  font-size: 3.5rem;
   font-weight: 500;
   letter-spacing: -0.02em;
 }
@@ -116,7 +116,7 @@ body {
   background: none;
   border: none;
   font-family: var(--font-main);
-  font-size: 2rem; /* Reduzido de 2.6rem */
+  font-size: 2rem;
   font-weight: 400;
   color: #a0a0a0;
   cursor: pointer;
@@ -308,6 +308,74 @@ body {
   margin-top: 0.2rem;
 }
 
+/* MODAL DE VISUALIZAÇÃO (FUNDO TRANSLÚCIDO E CAIXA DE PROTÓTIPO) */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(30, 30, 30, 0.65); /* Fundo translúcido */
+  backdrop-filter: blur(10px);              /* Efeito fosco/blur do site de fundo */
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+/* CARD CENTRALIZADO ESTILO MOLDURA */
+.modal-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  height: 80vh;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* ÁREA DE MÍDIAS (ROLAGEM INTERNA EXCLUSIVA) */
+.modal-media-scroll {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
+
+.modal-media-scroll img,
+.modal-media-scroll video {
+  width: 100%;
+  display: block;
+}
+
+/* Barra de rolagem discreta para a área de mídias */
+.modal-media-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-media-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+/* CAIXA BRANCA FIXA EMBAIXO (NÃO ROLA) */
+.modal-fixed-footer {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-top: 1px solid #eeeeee;
+  color: #111111;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
 /* FOOTER COPYRIGHT */
 .site-footer {
   text-align: center;
@@ -426,6 +494,15 @@ body {
 
   .category-title {
     font-size: 2.2rem;
+  }
+
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-card {
+    max-width: 100%;
+    height: 85vh;
   }
 
   .site-footer {
