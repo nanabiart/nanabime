@@ -1,3 +1,4 @@
+// TROCA DE ABAS (NAVIGATION TABS)
 function switchTab(tabId) {
   // Oculta todas as abas
   const contents = document.querySelectorAll('.tab-content');
@@ -19,5 +20,32 @@ function switchTab(tabId) {
   );
   if (activeBtn) {
     activeBtn.classList.add('active');
+  }
+}
+
+// JANELA MODAL (PROTÓTIPO COM ROLAGEM INTERNA)
+
+// Abre a janela e trava o scroll da página principal
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+// Fechamento direto da janela (ao clicar no botão X)
+function closeModalDirect(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// Fecha se o usuário clicar na área cinza (overlay) fora do card
+function closeModal(event, modalId) {
+  if (event.target.classList.contains('modal-overlay')) {
+    closeModalDirect(modalId);
   }
 }
