@@ -344,17 +344,17 @@ body {
 
 /* 1. LAYOUT DA HOME (TEXTO ABAIXO DA MÍDIA - ENCAIXE JUSTO E COMPACTO) */
 .modal-card.modal-home {
-  width: fit-content;
-  max-width: 90vw;
-  height: auto;           /* Ajuste automático para eliminar o espaço em branco */
+  width: 100%;
+  max-width: 560px;
+  height: auto;
   max-height: 88vh;
   display: flex;
   flex-direction: column;
 }
 
 .modal-card.modal-home .modal-media-scroll {
-  flex: initial;          /* Impede o esticamento vertical forçado */
-  max-height: 70vh;       /* Permite scroll em mídias longas */
+  flex: initial;
+  max-height: 68vh;
   overflow-y: auto;
   background-color: #ffffff;
 }
@@ -362,7 +362,6 @@ body {
 .modal-card.modal-home .modal-media-scroll img,
 .modal-card.modal-home .modal-media-scroll video {
   width: 100%;
-  max-width: 680px;
   height: auto;
   display: block;
   border-radius: 6px;
@@ -370,7 +369,7 @@ body {
 
 .modal-fixed-footer {
   background-color: #ffffff;
-  padding: 1.2rem 0.5rem 0.4rem 0.5rem;
+  padding: 1rem 0.2rem 0.2rem 0.2rem;
 }
 
 .modal-fixed-footer h3 {
@@ -399,6 +398,7 @@ body {
 
 .modal-card.modal-sidebar .modal-media-scroll {
   max-width: 550px;
+  flex: 1;
   overflow-y: auto;
   background-color: #ffffff;
 }
@@ -409,6 +409,16 @@ body {
   height: auto;
   display: block;
   border-radius: 6px;
+}
+
+/* AJUSTE PARA PROTÓTIPOS EMBUTIDOS (FIGMA / IFRAMES) */
+.modal-card.modal-sidebar .modal-media-scroll iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border: none;
+  border-radius: 6px;
+  display: block;
 }
 
 .modal-fixed-sidebar {
@@ -594,6 +604,10 @@ body {
 
   .modal-card.modal-sidebar .modal-media-scroll {
     max-width: 100%;
+  }
+
+  .modal-card.modal-sidebar .modal-media-scroll iframe {
+    min-height: 380px;
   }
 
   .modal-card.modal-sidebar .modal-fixed-sidebar {
