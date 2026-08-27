@@ -308,7 +308,7 @@ body {
   margin-top: 0.2rem;
 }
 
-/* MODAL DE VISUALIZAÇÃO (FUNDO TRANSLÚCIDO E CAIXA RESPONSIVA) */
+/* MODAL DE VISUALIZAÇÃO (OVERLAY TRANSLÚCIDO) */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -316,8 +316,8 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(30, 30, 30, 0.65); /* Fundo translúcido */
-  backdrop-filter: blur(10px);              /* Efeito fosco/blur do fundo */
+  background-color: rgba(30, 30, 30, 0.65);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
   justify-content: center;
@@ -329,18 +329,19 @@ body {
   display: flex;
 }
 
-/* CARD CENTRALIZADO RESPONSIVO COM BORDA BRANCA */
+/* CARD COM LAYOUT EDITORIAL LADO A LADO */
 .modal-card {
   background-color: #ffffff;
-  width: fit-content;        /* Adapta a largura dinamicamente à imagem */
-  max-width: 90vw;           /* Limite proporcional na tela */
-  height: 88vh;              /* Altura ampliada no viewport */
+  width: fit-content;
+  max-width: 90vw;
+  height: 88vh;
   border-radius: 12px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Coloca a mídia à esquerda e o texto à direita */
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
-  padding: 1rem;            /* Moldura branca ao redor do conteúdo */
+  padding: 1rem;
+  gap: 1.5rem;
 }
 
 /* ÁREA DE MÍDIAS (ROLAGEM INTERNA EXCLUSIVA) */
@@ -348,20 +349,28 @@ body {
   flex: 1;
   overflow-y: auto;
   background-color: #ffffff;
+  height: 100%;
 }
 
 .modal-media-scroll img,
 .modal-media-scroll video {
   width: 100%;
-  max-width: 800px;          /* Limite visual para imagens muito largas */
+  max-width: 680px;
   height: auto;
   display: block;
   border-radius: 4px;
 }
 
+.modal-media-scroll img + img,
+.modal-media-scroll img + video,
+.modal-media-scroll video + img,
+.modal-media-scroll video + video {
+  margin-top: 1rem;
+}
+
 /* Barra de rolagem discreta */
 .modal-media-scroll::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 
 .modal-media-scroll::-webkit-scrollbar-thumb {
@@ -369,13 +378,30 @@ body {
   border-radius: 3px;
 }
 
-/* CAIXA BRANCA FIXA EMBAIXO (NÃO ROLA) */
-.modal-fixed-footer {
+/* PAINEL FIXO DE TEXTO (COLUNA DIREITA) */
+.modal-fixed-sidebar {
+  width: 280px;
+  flex-shrink: 0;
   background-color: #ffffff;
-  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 1rem 0.5rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.modal-fixed-sidebar h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
   color: #111111;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.modal-fixed-sidebar p {
+  font-size: 0.9rem;
+  color: #444444;
+  line-height: 1.55;
   word-break: break-word;
 }
 
@@ -503,11 +529,33 @@ body {
     padding: 1rem;
   }
 
+  /* NO MOBILE: EMPILHA A MÍDIA NO TOPO E O TEXTO EMBAIXO */
   .modal-card {
+    flex-direction: column;
     width: 100%;
     max-width: 100%;
     height: 85vh;
     padding: 0.8rem;
+    gap: 1rem;
+  }
+
+  .modal-media-scroll img,
+  .modal-media-scroll video {
+    max-width: 100%;
+  }
+
+  .modal-fixed-sidebar {
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    gap: 0.4rem;
+  }
+
+  .modal-fixed-sidebar h3 {
+    font-size: 1rem;
+  }
+
+  .modal-fixed-sidebar p {
+    font-size: 0.85rem;
   }
 
   .site-footer {
