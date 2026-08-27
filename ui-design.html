@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UI Design — nanabi</title>
+
+  <link rel="icon" type="image/png" href="star.png">
+
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,17 +22,7 @@
   <main class="gallery-container">
     <div class="projects-grid">
 
-      <div class="project-card">
-        <div class="card-thumb">
-          <img src="THUMBS/UI_01.jpg" alt="ANIMALE — ART LABEL">
-        </div>
-        <div class="card-info">
-          <h3>ANIMALE — ART LABEL</h3>
-          <p>Landing Page · UI Design</p>
-        </div>
-      </div>
-
-      <div class="project-card">
+      <div class="project-card" onclick="openModal('modal-ui-oro')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/UI_02.jpg" alt="ANIMALE ORO">
         </div>
@@ -39,17 +32,17 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" onclick="openModal('modal-ui-alto-verao')" style="cursor: pointer;">
         <div class="card-thumb">
-          <img src="THUMBS/UI_03.jpg" alt="ANIMALE — ALTO VERÃO 27">
+          <img src="THUMBS/UI_03.jpg" alt="ANIMALE — ALTO VERÃO 26">
         </div>
         <div class="card-info">
-          <h3>ANIMALE — ALTO VERÃO 27</h3>
+          <h3>ANIMALE — ALTO VERÃO 26</h3>
           <p>Homepage · UI Design</p>
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card" onclick="openModal('modal-ui-inverno')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/UI_04.jpg" alt="ANIMALE — INVERNO 26">
         </div>
@@ -59,12 +52,71 @@
         </div>
       </div>
 
+      <div class="project-card" onclick="openModal('modal-ui-art-label')" style="cursor: pointer;">
+        <div class="card-thumb">
+          <img src="THUMBS/UI_01.jpg" alt="ANIMALE — ART LABEL II">
+        </div>
+        <div class="card-info">
+          <h3>ANIMALE — ART LABEL II</h3>
+          <p>Landing Page · UI Design</p>
+        </div>
+      </div>
+
     </div>
   </main>
+
+  <div id="modal-ui-oro" class="modal-overlay" onclick="closeModal(event, 'modal-ui-oro')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/ibQG0NcbvElLDl8dOf6aCi/Untitled?page-id=11%3A55&node-id=11-131&m=draw&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE ORO</h3>
+        <p>Creation of ANIMALE ORO’s homepage, designed from scratch to present the line’s identity and products in the digital space. The page brings together content, campaigns and launches, updated with each new collection.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ui-alto-verao" class="modal-overlay" onclick="closeModal(event, 'modal-ui-alto-verao')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/ibQG0NcbvElLDl8dOf6aCi/Untitled?page-id=11%3A55&node-id=11-438&m=draw&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE — ALTO VERÃO 26</h3>
+        <p>Homepage update for ANIMALE’s High Summer 26, bringing the new drop to the digital space. The composition explores different images and campaign cutouts to present the collection’s new releases.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ui-inverno" class="modal-overlay" onclick="closeModal(event, 'modal-ui-inverno')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/ibQG0NcbvElLDl8dOf6aCi/Untitled?page-id=11%3A55&node-id=11-1426&m=draw&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE — INVERNO 26</h3>
+        <p>Homepage update for ANIMALE’s Winter 26, bringing the new collection to the digital space. The layout highlights the products through different images, campaigns and visual contexts from the season.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ui-art-label" class="modal-overlay" onclick="closeModal(event, 'modal-ui-art-label')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/ibQG0NcbvElLDl8dOf6aCi/Untitled?page-id=11%3A55&node-id=11-2144&m=draw&scaling=scale-down-width&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE — ART LABEL II</h3>
+        <p>Landing page for ANIMALE’s second Art Label, created in collaboration with artist Pia Palmas. The proposal translates the artist’s visual language into the digital space, creating an experience that brings together art, fashion and content.</p>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <p>© 2026 nanabi</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
