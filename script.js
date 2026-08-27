@@ -34,7 +34,7 @@ function openModal(modalId) {
   }
 }
 
-// Fechamento direto da janela (ao clicar no botão X)
+// Fechamento direto da janela
 function closeModalDirect(modalId) {
   const modal = document.getElementById(modalId);
   if (modal) {
@@ -49,3 +49,14 @@ function closeModal(event, modalId) {
     closeModalDirect(modalId);
   }
 }
+
+// Fecha o modal aberto ao pressionar a tecla ESC
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    const activeModals = document.querySelectorAll('.modal-overlay.active');
+    activeModals.forEach(modal => {
+      modal.classList.remove('active');
+    });
+    document.body.style.overflow = 'auto';
+  }
+});
