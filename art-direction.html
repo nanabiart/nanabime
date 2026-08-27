@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Art Direction — nanabi</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="star.png">
+
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +23,8 @@
   <main class="gallery-container">
     <div class="projects-grid">
 
-      <div class="project-card">
+      <!-- CARD 1: JOHNNIE WALKER -->
+      <div class="project-card" onclick="openModal('modal-johnnie-walker')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/Art Direction_01.jpg" alt="JOHNNIE WALKER — LOLLAPALOOZA 2026">
         </div>
@@ -29,7 +34,8 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <!-- CARD 2: CIELO -->
+      <div class="project-card" onclick="openModal('modal-cielo')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/Art Direction_02.jpg" alt="CIELO — LOLLAPALOOZA 2026">
         </div>
@@ -42,9 +48,36 @@
     </div>
   </main>
 
+  <!-- MODAL 1: JOHNNIE WALKER -->
+  <div id="modal-johnnie-walker" class="modal-overlay" onclick="closeModal(event, 'modal-johnnie-walker')">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_01.jpg" alt="Johnnie Walker — Lollapalooza 2026">
+        <img src="THUMBS/Art Direction_02.jpg" alt="Detail View">
+      </div>
+      <div class="modal-fixed-footer">
+        <p>Real-time art direction and visual coverage developed for Johnnie Walker at Lollapalooza 2026, creating immediate digital assets that capture the festival vibe and brand identity.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CIELO -->
+  <div id="modal-cielo" class="modal-overlay" onclick="closeModal(event, 'modal-cielo')">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_02.jpg" alt="Cielo — Lollapalooza 2026">
+        <img src="THUMBS/Art Direction_01.jpg" alt="Detail View">
+      </div>
+      <div class="modal-fixed-footer">
+        <p>Real-time art direction and visual coverage developed for Cielo at Lollapalooza 2026, delivering high-impact content and live brand engagement.</p>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <p>© 2026 nanabi</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
