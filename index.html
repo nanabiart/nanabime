@@ -217,31 +217,19 @@
 
   </main>
 
-  <!-- MODAL DE VISUALIZAÇÃO COM ROLAGEM INTERNA (TESTE JOHNNIE WALKER) -->
+  <!-- MODAL DE VISUALIZAÇÃO (CAIXA / PROTÓTIPO COM ROLAGEM E LEGENDA FIXA) -->
   <div id="modal-johnnie-walker" class="modal-overlay" onclick="closeModal(event, 'modal-johnnie-walker')">
-    <div class="modal-container" onclick="event.stopPropagation()">
+    <div class="modal-card" onclick="event.stopPropagation()">
       
-      <!-- CABEÇALHO FIXO -->
-      <div class="modal-header">
-        <div class="modal-title-box">
-          <h2>JOHNNIE WALKER — LOLLAPALOOZA 2026</h2>
-          <p>Art Direction · Real Time</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeModalDirect('modal-johnnie-walker')">&times;</button>
+      <!-- ÁREA DE MÍDIA (ONDE ACONTECE A ROLAGEM) -->
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_01.jpg" alt="Johnnie Walker — Lollapalooza 2026">
+        <img src="THUMBS/Art Direction_02.jpg" alt="Detail View">
       </div>
 
-      <!-- CORPO COM ROLAGEM INTERNA -->
-      <div class="modal-scroll-body">
-        <div class="modal-media">
-          <img src="THUMBS/Art Direction_01.jpg" alt="Johnnie Walker Lollapalooza 2026">
-        </div>
-        <div class="modal-text-content">
-          <h3>About the Project</h3>
-          <p>Real-time art direction and visual coverage developed for Johnnie Walker at Lollapalooza 2026, creating immediate digital assets that capture the festival vibe and brand identity.</p>
-        </div>
-        <div class="modal-gallery">
-          <img src="THUMBS/Art Direction_02.jpg" alt="Detail View">
-        </div>
+      <!-- RODAPÉ BRANCO FIXO (TEXTO PARADO) -->
+      <div class="modal-fixed-footer">
+        <p>Real-time art direction and visual coverage developed for Johnnie Walker at Lollapalooza 2026, creating immediate digital assets that capture the festival vibe and brand identity.</p>
       </div>
 
     </div>
