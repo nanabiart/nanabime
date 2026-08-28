@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Campaigns — nanabi</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="star.png">
+
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,22 +23,24 @@
   <main class="gallery-container">
     <div class="projects-grid">
 
-      <div class="project-card">
+      <!-- CARD 1: ANIMALE ORO — JUNHO 25 -->
+      <div class="project-card" onclick="openModal('modal-digital-01')" style="cursor: pointer;">
         <div class="card-thumb">
-          <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE — ORO JUNHO 25">
+          <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25">
         </div>
         <div class="card-info">
-          <h3>ANIMALE — ORO JUNHO 25</h3>
+          <h3>ANIMALE ORO — JUNHO 25</h3>
           <p>Digital Campaign · Video</p>
         </div>
       </div>
 
-      <div class="project-card">
+      <!-- CARD 2: ANIMALE — WESTERN MEDIA -->
+      <div class="project-card" onclick="openModal('modal-digital-02')" style="cursor: pointer;">
         <div class="card-thumb">
-          <img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — MÍDIAS WESTERN">
+          <img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA">
         </div>
         <div class="card-info">
-          <h3>ANIMALE — MÍDIAS WESTERN</h3>
+          <h3>ANIMALE — WESTERN MEDIA</h3>
           <p>Digital Campaign · Video</p>
         </div>
       </div>
@@ -42,9 +48,44 @@
     </div>
   </main>
 
+  <!-- ==================== MODAIS DE DIGITAL CAMPAIGNS ==================== -->
+
+  <!-- MODAL 1: ANIMALE ORO — JUNHO 25 (FIGMA EMBED) -->
+  <div id="modal-digital-01" class="modal-overlay" onclick="closeModal(event, 'modal-digital-01')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <iframe 
+          style="border: none; border-radius: 6px;" 
+          width="100%" 
+          height="100%" 
+          src="https://embed.figma.com/proto/F3x8olmVaANYgZ93giisVo/Untitled?page-id=27%3A14&node-id=27-15&viewport=235%2C387%2C0.2&scaling=scale-down-width&content-scaling=fixed&embed-host=share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE ORO<br>JUNHO 25</h3>
+        <p>Digital video campaign strategy and visual execution for ANIMALE ORO’s June launch. Interactive motion pieces and social media video deployment engineered to highlight fine jewelry aesthetics and brand performance across digital channels.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: ANIMALE — WESTERN MEDIA -->
+  <div id="modal-digital-02" class="modal-overlay" onclick="closeModal(event, 'modal-digital-02')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA" style="width: 100%; border-radius: 6px;">
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE<br>WESTERN MEDIA</h3>
+        <p>Digital campaign developed for ANIMALE's Western Media collection. Multi-channel video motion assets structured for maximum engagement across paid and organic digital placements.</p>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <p>© 2026 nanabi</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
