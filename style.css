@@ -493,6 +493,20 @@ body {
   display: block;
 }
 
+/* CENTRALIZAÇÃO EXCLUSIVA DO VÍDEO NO MODAL DE OOH */
+#modal-ooh-01 .modal-media-scroll {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #ffffff !important;
+}
+
+#modal-ooh-01 .modal-media-scroll video {
+  max-height: 100% !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
 .modal-fixed-sidebar {
   width: 260px;
   flex-shrink: 0;
