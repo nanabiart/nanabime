@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OOH — nanabi</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="star.png">
+
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,32 +23,67 @@
   <main class="gallery-container">
     <div class="projects-grid">
 
-      <div class="project-card">
+      <!-- CARD 1: ANIMALE — INVERNO 27 -->
+      <div class="project-card" onclick="openModal('modal-ooh-01')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/OOH_01.jpg" alt="ANIMALE — INVERNO 27">
         </div>
         <div class="card-info">
-          <h3>ANIMALE — INVERNO 26</h3>
+          <h3>ANIMALE — INVERNO 27</h3>
           <p>OOH · Aeroporto Santos Dumont</p>
         </div>
       </div>
 
-      <div class="project-card">
+      <!-- CARD 2: NINA MORAES DESIGN — INTERIORES -->
+      <div class="project-card" onclick="openModal('modal-ooh-02')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/OOH_02.jpg" alt="NINA MORAES DESIGN — INTERIORES">
         </div>
         <div class="card-info">
           <h3>NINA MORAES DESIGN — INTERIORES</h3>
-          <p>Print Production · Art Preparation</p>
+          <p>Environmental Design · Digital Experience</p>
         </div>
       </div>
 
     </div>
   </main>
 
+  <!-- ==================== MODAIS DE OOH ==================== -->
+
+  <!-- MODAL 1: ANIMALE — INVERNO 27 (VÍDEO MP4 DA PASTA) -->
+  <div id="modal-ooh-01" class="modal-overlay" onclick="closeModal(event, 'modal-ooh-01')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <video autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 6px; display: block;">
+          <source src="OOH/19_midia_ontour_aeroporto4.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE<br>INVERNO 27</h3>
+        <p>Out-of-Home digital motion strategy engineered for high-impact placement at Santos Dumont Airport. Designed to drive brand awareness and engagement across major transport hubs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: NINA MORAES DESIGN — INTERIORES (IMAGEM DA PASTA) -->
+  <div id="modal-ooh-02" class="modal-overlay" onclick="closeModal(event, 'modal-ooh-02')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="OOH/13735d76-12d0-4c40-9b04-39586f73e9d6 (1).png" alt="NINA MORAES DESIGN — INTERIORES" style="width: 100%; height: auto; border-radius: 6px; display: block;">
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>NINA MORAES DESIGN<br>INTERIORES</h3>
+        <p>Environmental design visual direction and interior branding deployment structured for physical space activation and digital showcase.</p>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
+    <a href="#top" class="back-link back-to-top">↑ back to top</a>
     <p>© 2026 nanabi</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
