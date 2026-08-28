@@ -23,6 +23,26 @@ function switchTab(tabId) {
   }
 }
 
+// BOTÃO LOAD MORE (EXIBE PROJETOS OCULTOS)
+function showMoreProjects() {
+  const hiddenProjects = document.querySelectorAll('.project-card.hidden-project');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+
+  // Revela até 4 projetos a cada clique
+  const itemsToShow = 4;
+
+  for (let i = 0; i < itemsToShow && i < hiddenProjects.length; i++) {
+    hiddenProjects[i].classList.remove('hidden-project');
+  }
+
+  // Se não houver mais projetos escondidos, esconde o botão "load more"
+  if (document.querySelectorAll('.project-card.hidden-project').length === 0) {
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display = 'none';
+    }
+  }
+}
+
 // JANELA MODAL (PROTÓTIPO COM ROLAGEM INTERNA)
 
 // Abre a janela e trava o scroll da página principal
