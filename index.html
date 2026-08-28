@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nanabi — creative designer</title>
 
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="star.png">
 
   <link rel="stylesheet" href="style.css">
@@ -14,10 +15,12 @@
 </head>
 <body id="top">
 
+  <!-- HERO SECTION -->
   <header class="hero">
     <h1>you found nanabi</h1>
     <p class="subtitle">creative designer</p>
 
+    <!-- BANNER CARD CENTRADO -->
     <div class="banner-container">
       <div class="banner-dark-card">
         <div class="photo-window">
@@ -31,6 +34,7 @@
     </div>
   </header>
 
+  <!-- NAVIGATION TABS -->
   <nav class="tab-nav">
     <button class="tab-btn active" onclick="switchTab('all')">all</button>
     <button class="tab-btn" onclick="switchTab('specialties')">specialties</button>
@@ -38,11 +42,16 @@
     <button class="tab-btn" onclick="switchTab('contact')">contact</button>
   </nav>
 
+  <!-- CONTENT SECTIONS -->
   <main class="content-area">
 
+    <!-- TAB: ALL -->
     <section id="all" class="tab-content active">
       <div class="projects-grid" id="projects-grid">
 
+        <!-- PROJETOS VISÍVEIS INICIALMENTE -->
+
+        <!-- ART DIRECTION -->
         <div class="project-card" onclick="openModal('modal-johnnie-walker')" style="cursor: pointer;">
           <div class="card-thumb"><img src="THUMBS/Art Direction_01.jpg" alt="JOHNNIE WALKER — LOLLAPALOOZA 2026"></div>
           <div class="card-info">
@@ -59,5 +68,401 @@
           </div>
         </div>
 
+        <!-- CRM -->
         <div class="project-card" onclick="openModal('modal-crm-01')" style="cursor: pointer;">
-          <div class="card-thumb"><img src="THUMBS/CRM_0
+          <div class="card-thumb"><img src="THUMBS/CRM_01.jpg" alt="ANIMALE — ALTO INVERNO 26"></div>
+          <div class="card-info">
+            <h3>ANIMALE — ALTO INVERNO 26</h3>
+            <p>Email · New In</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openModal('modal-crm-02')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/CRM_02.jpg" alt="ANIMALE — SOUL"></div>
+          <div class="card-info">
+            <h3>ANIMALE — SOUL 25</h3>
+            <p>Email · Launch</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openModal('modal-crm-03')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/CRM_03.jpg" alt="ANIMALE ORO — OASIS"></div>
+          <div class="card-info">
+            <h3>ANIMALE ORO — OASIS 26</h3>
+            <p>Email · Launch</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="openModal('modal-crm-04')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/CRM_04.jpg" alt="ANIMALE — DIA DAS MÃES"></div>
+          <div class="card-info">
+            <h3>ANIMALE — DIA DAS MÃES 25</h3>
+            <p>Email · Campaign</p>
+          </div>
+        </div>
+
+        <!-- PROJETOS OCULTOS (EXIBIDOS AO CLICAR EM "LOAD MORE") -->
+
+        <!-- DIGITAL CAMPAIGNS -->
+        <div class="project-card hidden-project" onclick="openModal('modal-digital-01')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25"></div>
+          <div class="card-info">
+            <h3>ANIMALE ORO — JUNHO 25</h3>
+            <p>Digital Campaign · Video</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-digital-02')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA"></div>
+          <div class="card-info">
+            <h3>ANIMALE — WESTERN MEDIA 25</h3>
+            <p>Digital Campaign · Video</p>
+          </div>
+        </div>
+
+        <!-- UI DESIGN -->
+        <div class="project-card hidden-project" onclick="openModal('modal-ui-01')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/UI_01.jpg" alt="ANIMALE — ART LABEL"></div>
+          <div class="card-info">
+            <h3>ANIMALE — ART LABEL 25</h3>
+            <p>Landing Page · UI Design</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-ui-02')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/UI_02.jpg" alt="ANIMALE ORO"></div>
+          <div class="card-info">
+            <h3>ANIMALE ORO 26</h3>
+            <p>Subhome · UI Design</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-ui-03')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/UI_03.jpg" alt="ANIMALE — ALTO VERÃO 27"></div>
+          <div class="card-info">
+            <h3>ANIMALE — ALTO VERÃO 26</h3>
+            <p>Homepage · UI Design</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-ui-04')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/UI_04.jpg" alt="ANIMALE — INVERNO 26"></div>
+          <div class="card-info">
+            <h3>ANIMALE — INVERNO 26</h3>
+            <p>Homepage · UI Design</p>
+          </div>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <div class="project-card hidden-project" onclick="openModal('modal-social-01')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/SOCIAL_01.jpg" alt="NEON — FESTIVAL NÔMADE"></div>
+          <div class="card-info">
+            <h3>NEON — FESTIVAL NÔMADE 2026</h3>
+            <p>Social Media · Real Time</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-social-02')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/SOCIAL_02.jpg" alt="WILDHEART — FESTIVAL"></div>
+          <div class="card-info">
+            <h3>WILDHEART — FESTIVAL 2024</h3>
+            <p>Social Media · Personal Project</p>
+          </div>
+        </div>
+
+        <!-- OOH -->
+        <div class="project-card hidden-project" onclick="openModal('modal-ooh-01')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/OOH_01.jpg" alt="ANIMALE — INVERNO 27"></div>
+          <div class="card-info">
+            <h3>ANIMALE — INVERNO 26</h3>
+            <p>OOH · Aeroporto Santos Dumont</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-ooh-02')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/OOH_02.jpg" alt="NINA MORAES DESIGN — INTERIORES"></div>
+          <div class="card-info">
+            <h3>NINA MORAES DESIGN — CASA MINIMUNDO 2023</h3>
+            <p>Print · Art Preparation</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BOTÃO LOAD MORE -->
+      <div class="load-more-container">
+        <button id="load-more-btn" onclick="showMoreProjects()">load more</button>
+      </div>
+    </section>
+
+    <!-- SPECIALTIES TAB -->
+    <section id="specialties" class="tab-content">
+      <div class="pills-grid">
+        <a href="art-direction.html" class="pill-btn">Art Direction</a>
+        <a href="crm.html" class="pill-btn">CRM</a>
+        <a href="digital-campaigns.html" class="pill-btn">Digital Campaigns</a>
+        <a href="ui-design.html" class="pill-btn">UI Design</a>
+        <a href="social-media.html" class="pill-btn">Social Media</a>
+        <a href="ooh.html" class="pill-btn">OOH</a>
+      </div>
+    </section>
+
+    <!-- ABOUT TAB -->
+    <section id="about" class="tab-content">
+      <div class="about-text">
+        <p>Based in Rio de Janeiro, Brazil, with a degree in Advertising and experience in digital communication and creative projects, I've worked across digital and offline environments, developing visual solutions for brands across different touchpoints.</p>
+        <p>My approach combines aesthetics, strategy, and performance, always considering how design can strengthen brands and create meaningful experiences.</p>
+        <p>I'm constantly learning, exploring new trends, and developing my technical and interpersonal skills. My favorite quality is curiosity; I believe it keeps me moving forward, pushing me to explore, learn, and go further.</p>
+        
+        <!-- TOOLS -->
+        <div class="tools-section">
+          <h3>tools</h3>
+          <p>Photoshop · Figma · Illustrator · After Effects</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT TAB -->
+    <section id="contact" class="tab-content">
+      <div class="contact-box">
+        <a href="mailto:nanabiart@gmail.com" class="email-link">
+          <img src="E-MAIL.png" alt="nanabiart@gmail.com" class="email-img">
+        </a>
+        <div class="social-buttons">
+          <a href="https://www.linkedin.com/in/nanabi/" target="_blank" rel="noopener noreferrer">
+            <img src="LINKEDIN.png" alt="LinkedIn" class="social-btn-img">
+          </a>
+          <a href="https://www.behance.net/nanabiart" target="_blank" rel="noopener noreferrer">
+            <img src="BEHANCE.png" alt="Behance" class="social-btn-img">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== ESTRUTURAS DE MODAL (HOME: LAYOUT COMPACTO) ==================== -->
+
+  <!-- ART DIRECTION -->
+  <div id="modal-johnnie-walker" class="modal-overlay" onclick="closeModal(event, 'modal-johnnie-walker')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_01.jpg" alt="Johnnie Walker — Lollapalooza 2026">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>JOHNNIE WALKER — LOLLAPALOOZA 2026</h3>
+        <p>Art Direction · Real Time</p>
+        <a href="art-direction.html?project=modal-johnnie-walker" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-cielo" class="modal-overlay" onclick="closeModal(event, 'modal-cielo')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_02.jpg" alt="Cielo — Lollapalooza 2026">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>CIELO — LOLLAPALOOZA 2026</h3>
+        <p>Art Direction · Real Time</p>
+        <a href="art-direction.html?project=modal-cielo" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CRM -->
+  <div id="modal-crm-01" class="modal-overlay" onclick="closeModal(event, 'modal-crm-01')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/CRM_01.jpg" alt="ANIMALE — ALTO INVERNO 26">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — ALTO INVERNO 26</h3>
+        <p>Email · New In</p>
+        <a href="crm.html?project=modal-crm-01" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-crm-02" class="modal-overlay" onclick="closeModal(event, 'modal-crm-02')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/CRM_02.jpg" alt="ANIMALE — SOUL 25">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — SOUL 25</h3>
+        <p>Email · Launch</p>
+        <a href="crm.html?project=modal-crm-02" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-crm-03" class="modal-overlay" onclick="closeModal(event, 'modal-crm-03')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/CRM_03.jpg" alt="ANIMALE ORO — OASIS 26">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE ORO — OASIS 26</h3>
+        <p>Email · Launch</p>
+        <a href="crm.html?project=modal-crm-03" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-crm-04" class="modal-overlay" onclick="closeModal(event, 'modal-crm-04')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/CRM_04.jpg" alt="ANIMALE — DIA DAS MÃES 25">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — DIA DAS MÃES 25</h3>
+        <p>Email · Campaign</p>
+        <a href="crm.html?project=modal-crm-04" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIGITAL CAMPAIGNS -->
+  <div id="modal-digital-01" class="modal-overlay" onclick="closeModal(event, 'modal-digital-01')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE ORO — JUNHO 25</h3>
+        <p>Digital Campaign · Video</p>
+        <a href="digital-campaigns.html?project=modal-digital-01" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-digital-02" class="modal-overlay" onclick="closeModal(event, 'modal-digital-02')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA 25">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — WESTERN MEDIA 25</h3>
+        <p>Digital Campaign · Video</p>
+        <a href="digital-campaigns.html?project=modal-digital-02" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- UI DESIGN -->
+  <div id="modal-ui-01" class="modal-overlay" onclick="closeModal(event, 'modal-ui-01')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/UI_01.jpg" alt="ANIMALE — ART LABEL 25">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — ART LABEL 25</h3>
+        <p>Landing Page · UI Design</p>
+        <a href="ui-design.html?project=modal-ui-art-label" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ui-02" class="modal-overlay" onclick="closeModal(event, 'modal-ui-02')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/UI_02.jpg" alt="ANIMALE ORO 26">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE ORO 26</h3>
+        <p>Subhome · UI Design</p>
+        <a href="ui-design.html?project=modal-ui-oro" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ui-03" class="modal-overlay" onclick="closeModal(event, 'modal-ui-03')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/UI_03.jpg" alt="ANIMALE — ALTO VERÃO 26">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — ALTO VERÃO 26</h3>
+        <p>Homepage · UI Design</p>
+        <a href="ui-design.html?project=modal-ui-alto-verao" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ui-04" class="modal-overlay" onclick="closeModal(event, 'modal-ui-04')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/UI_04.jpg" alt="ANIMALE — INVERNO 26">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — INVERNO 26</h3>
+        <p>Homepage · UI Design</p>
+        <a href="ui-design.html?project=modal-ui-inverno" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOCIAL MEDIA -->
+  <div id="modal-social-01" class="modal-overlay" onclick="closeModal(event, 'modal-social-01')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/SOCIAL_01.jpg" alt="NEON — FESTIVAL NÔMADE 2026">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>NEON — FESTIVAL NÔMADE 2026</h3>
+        <p>Social Media · Real Time</p>
+        <a href="social-media.html?project=modal-social-01" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-social-02" class="modal-overlay" onclick="closeModal(event, 'modal-social-02')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/SOCIAL_02.jpg" alt="WILDHEART — FESTIVAL 2024">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>WILDHEART — FESTIVAL 2024</h3>
+        <p>Social Media · Personal Project</p>
+        <a href="social-media.html?project=modal-social-02" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- OOH -->
+  <div id="modal-ooh-01" class="modal-overlay" onclick="closeModal(event, 'modal-ooh-01')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/OOH_01.jpg" alt="ANIMALE — INVERNO 26">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — INVERNO 26</h3>
+        <p>OOH · Aeroporto Santos Dumont</p>
+        <a href="ooh.html?project=modal-ooh-01" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ooh-02" class="modal-overlay" onclick="closeModal(event, 'modal-ooh-02')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/OOH_02.jpg" alt="NINA MORAES DESIGN — CASA MINIMUNDO 2023">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>NINA MORAES DESIGN — CASA MINIMUNDO 2023</h3>
+        <p>Print · Art Preparation</p>
+        <a href="ooh.html?project=modal-ooh-02" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER COPYRIGHT & BACK TO TOP -->
+  <footer class="site-footer">
+    <a href="#top" class="back-link back-to-top">↑ back to top</a>
+    <p>© 2026 nanabi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
