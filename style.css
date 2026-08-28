@@ -194,6 +194,26 @@ body {
   margin-top: 1.8rem;
 }
 
+/* FERRAMENTAS NA ABA ABOUT */
+.tools-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tools-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--text-dark);
+  text-transform: lowercase;
+}
+
+.tools-section p {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
 /* CONTACT SECTION */
 .contact-box {
   margin-top: 4rem;
