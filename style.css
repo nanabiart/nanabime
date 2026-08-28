@@ -253,11 +253,15 @@ body {
   transform: scale(1.08);
 }
 
-/* GALERIAS E INTERNAS */
+/* GALERIAS E INTERNAS (HEADER FIXO EM CIMA) */
 .project-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-color);
+  z-index: 100;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 4rem 3rem 2.5rem 3rem;
+  padding: 3rem 3rem 2rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -398,6 +402,32 @@ body {
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
   padding: 1rem;
+  position: relative;
+}
+
+/* BOTÃO CLOSE EM CINZA SUAVE */
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #f1f1f1;
+  color: #555555;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  z-index: 50;
+}
+
+.modal-close-btn:hover {
+  background-color: #e2e2e2;
+  color: #111111;
 }
 
 /* 1. LAYOUT DA HOME (TEXTO ABAIXO DA MÍDIA) */
@@ -517,20 +547,6 @@ body {
   min-height: 480px;
   margin: 0 auto;
   display: block;
-}
-
-/* CENTRALIZAÇÃO EXCLUSIVA DO VÍDEO NO MODAL DE OOH */
-#modal-ooh-01 .modal-media-scroll {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background-color: #ffffff !important;
-}
-
-#modal-ooh-01 .modal-media-scroll video {
-  max-height: 100% !important;
-  width: auto !important;
-  object-fit: contain !important;
 }
 
 .modal-fixed-sidebar {
@@ -667,9 +683,21 @@ body {
     width: 100%;
   }
 
+  /* UNIFORMIZAÇÃO DAS FONTES NO MOBILE (ABOUT & TOOLS) */
   .about-text {
     font-size: 1rem;
-    text-align: left;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .tools-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .tools-section p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .contact-box {
