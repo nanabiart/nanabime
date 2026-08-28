@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <!-- CARD 2: WILDHEART (ABRE O EMBED DO BEHANCE NO MODAL) -->
+      <!-- CARD 2: WILDHEART -->
       <div class="project-card" onclick="openModal('modal-social-02')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/SOCIAL_02.jpg" alt="WILDHEART — FESTIVAL">
@@ -50,34 +50,36 @@
 
   <!-- ==================== MODAIS DE SOCIAL MEDIA ==================== -->
 
-  <!-- MODAL 1: NEON -->
+  <!-- MODAL 1: NEON (EMBED INSTAGRAM + TEXTO COMPLETO) -->
   <div id="modal-social-01" class="modal-overlay" onclick="closeModal(event, 'modal-social-01')">
     <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
       <div class="modal-media-scroll">
-        <img src="THUMBS/SOCIAL_01.jpg" alt="NEON — FESTIVAL NÔMADE" style="width: 100%; border-radius: 6px;">
+        <iframe 
+          src="https://www.instagram.com/p/DX25G3jkSC1/embed" 
+          width="100%" 
+          height="580" 
+          frameborder="0" 
+          scrolling="no" 
+          allowtransparency="true"
+          style="border: none; border-radius: 6px; background: #ffffff;">
+        </iframe>
       </div>
       <div class="modal-fixed-sidebar">
         <h3>NEON<br>FESTIVAL NÔMADE</h3>
-        <p>Real-time visual content creation and social media coverage developed during Nomad Festival.</p>
+        <p>The project for Neon involved developing the visual concept for Festival Nômade from the initial concept through its final execution. As an Art Direction Assistant, I contributed to defining the visual language, including the direction of illustrations and graphic elements, ensuring the work was aligned with the brand guidelines and consistently reflected Neon’s identity. I also participated in the real-time coverage, developing carousel content published throughout the festival.</p>
+        <a href="https://www.instagram.com/p/DX25G3jkSC1/?img_index=1" target="_blank" rel="noopener noreferrer" class="modal-cta-btn">
+          view on instagram ↗
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- MODAL 2: WILDHEART (EMBED DO BEHANCE) -->
+  <!-- MODAL 2: WILDHEART (COM WH_01 E WH_02 DA PASTA SOCIAL_MEDIA) -->
   <div id="modal-social-02" class="modal-overlay" onclick="closeModal(event, 'modal-social-02')">
     <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
       <div class="modal-media-scroll">
-        <iframe 
-          src="https://www.behance.net/embed/project/218511555?ilo0=1" 
-          height="100%" 
-          width="100%" 
-          style="border: none; border-radius: 6px; min-height: 600px;" 
-          allowfullscreen 
-          lazyload 
-          frameborder="0" 
-          allow="clipboard-write" 
-          refererpolicy="strict-origin-when-cross-origin">
-        </iframe>
+        <img src="SOCIAL_MEDIA/WH_01.jpg" alt="Wildheart Fest - Image 1" style="width: 100%; border-radius: 6px; display: block; margin-bottom: 1rem;">
+        <img src="SOCIAL_MEDIA/WH_02.jpg" alt="Wildheart Fest - Image 2" style="width: 100%; border-radius: 6px; display: block;">
       </div>
       <div class="modal-fixed-sidebar">
         <h3>WILDHEART<br>FESTIVAL</h3>
@@ -88,6 +90,7 @@
   </div>
 
   <footer class="site-footer">
+    <a href="#top" class="back-link back-to-top">↑ back to top</a>
     <p>© 2026 nanabi</p>
   </footer>
 
