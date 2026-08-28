@@ -389,15 +389,15 @@ body {
   line-height: 1.4;
 }
 
-/* BOTÃO CTA NOS MODAIS DA HOME (VIEW PROJECT) */
+/* BOTÃO CTA NOS MODAIS DA HOME (VIEW PROJECT - COR DO RETÂNGULO PRINCIPAL) */
 .modal-cta-btn {
   display: inline-block;
   margin-top: 0.8rem;
   padding: 0.45rem 1rem;
-  background-color: #111111;  /* Fundo preto sólido */
+  background-color: var(--dark-banner); /* #332B36 */
   color: #ffffff;
-  text-decoration: none;      /* Sem sublinhado */
-  font-size: 0.75rem;         /* Menor para criar hierarquia */
+  text-decoration: none;                /* Sem sublinhado */
+  font-size: 0.75rem;                   /* Menor para hierarquia */
   font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: lowercase;
@@ -406,7 +406,7 @@ body {
 }
 
 .modal-cta-btn:hover {
-  background-color: #333333;
+  background-color: var(--pill-hover);   /* #221c24 */
   transform: translateY(-1px);
 }
 
