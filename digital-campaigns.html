@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Campaigns — nanabi</title>
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="star.png">
 
   <link rel="stylesheet" href="style.css">
@@ -23,7 +22,6 @@
   <main class="gallery-container">
     <div class="projects-grid">
 
-      <!-- CARD 1: ANIMALE ORO — JUNHO 25 -->
       <div class="project-card" onclick="openModal('modal-digital-01')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25">
@@ -34,7 +32,6 @@
         </div>
       </div>
 
-      <!-- CARD 2: ANIMALE — WESTERN MEDIA -->
       <div class="project-card" onclick="openModal('modal-digital-02')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA">
@@ -48,9 +45,6 @@
     </div>
   </main>
 
-  <!-- ==================== MODAIS DE DIGITAL CAMPAIGNS ==================== -->
-
-  <!-- MODAL 1: ANIMALE ORO — JUNHO 25 -->
   <div id="modal-digital-01" class="modal-overlay" onclick="closeModal(event, 'modal-digital-01')">
     <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
       <div class="modal-media-scroll" style="background-color: #ffffff; overflow: hidden; display: flex; justify-content: center;">
@@ -58,6 +52,7 @@
           style="border: none; border-radius: 6px; width: 800px; max-width: 100%; height: 500px; background-color: #ffffff;" 
           src="https://embed.figma.com/proto/F3x8olmVaANYgZ93giisVo/Untitled?node-id=31-94&page-id=31%3A93&scaling=scale-down-width&content-scaling=fixed&embed-host=share&hide-ui=1&muted=1" 
           allow="autoplay 'none'; audio 'none'"
+          loading="lazy"
           allowfullscreen>
         </iframe>
       </div>
@@ -68,28 +63,10 @@
     </div>
   </div>
 
-  <!-- MODAL 2: ANIMALE — WESTERN MEDIA -->
   <div id="modal-digital-02" class="modal-overlay" onclick="closeModal(event, 'modal-digital-02')">
     <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
       <div class="modal-media-scroll" style="background-color: #ffffff; overflow: hidden; display: flex; justify-content: center;">
         <iframe 
           style="border: none; border-radius: 6px; width: 800px; max-width: 100%; height: 500px; background-color: #ffffff;" 
           src="https://embed.figma.com/proto/F3x8olmVaANYgZ93giisVo/Untitled?node-id=27-15&page-id=27%3A14&scaling=scale-down-width&content-scaling=fixed&embed-host=share&hide-ui=1&muted=1" 
-          allow="autoplay 'none'; audio 'none'"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="modal-fixed-sidebar">
-        <h3>ANIMALE<br>WESTERN MEDIA</h3>
-        <p>Digital campaign developed from a sales opportunity driven by the Western trend. The project explored a selection of ANIMALE products that connected with the trend, translating the direction into a creative visual concept and adapting it into media formats for Pinterest and Meta.</p>
-      </div>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <p>© 2026 nanabi</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+          allow="autoplay 'none';
