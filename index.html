@@ -104,6 +104,22 @@
         <!-- PROJETOS OCULTOS (EXIBIDOS AO CLICAR EM "LOAD MORE") -->
 
         <!-- DIGITAL CAMPAIGNS -->
+        <div class="project-card hidden-project" onclick="openModal('modal-digital-verao')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/DIGITAL_CAMPAIGNS_03.jpg" alt="ANIMALE — VERÃO"></div>
+          <div class="card-info">
+            <h3>ANIMALE — VERÃO</h3>
+            <p>New In · 2026</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-digital-02')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA"></div>
+          <div class="card-info">
+            <h3>ANIMALE — WESTERN MEDIA</h3>
+            <p>Digital Campaign · Video · 2025</p>
+          </div>
+        </div>
+
         <div class="project-card hidden-project" onclick="openModal('modal-digital-01')" style="cursor: pointer;">
           <div class="card-thumb"><img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25"></div>
           <div class="card-info">
@@ -112,10 +128,10 @@
           </div>
         </div>
 
-        <div class="project-card hidden-project" onclick="openModal('modal-digital-02')" style="cursor: pointer;">
-          <div class="card-thumb"><img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA"></div>
+        <div class="project-card hidden-project" onclick="openModal('modal-digital-serpent')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="THUMBS/DIGITAL_CAMPAIGNS_04.jpg" alt="ANIMALE ORO — SERPENT DANCE"></div>
           <div class="card-info">
-            <h3>ANIMALE — WESTERN MEDIA</h3>
+            <h3>ANIMALE ORO — SERPENT DANCE</h3>
             <p>Digital Campaign · Video · 2025</p>
           </div>
         </div>
@@ -324,15 +340,15 @@
   </div>
 
   <!-- DIGITAL CAMPAIGNS -->
-  <div id="modal-digital-01" class="modal-overlay" onclick="closeModal(event, 'modal-digital-01')">
+  <div id="modal-digital-verao" class="modal-overlay" onclick="closeModal(event, 'modal-digital-verao')">
     <div class="modal-card modal-home" onclick="event.stopPropagation()">
       <div class="modal-media-scroll">
-        <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25">
+        <img src="THUMBS/DIGITAL_CAMPAIGNS_03.jpg" alt="ANIMALE — VERÃO">
       </div>
       <div class="modal-fixed-footer">
-        <h3>ANIMALE ORO — NEW IN</h3>
-        <p>Digital Campaign · Video · 2025</p>
-        <a href="digital-campaigns.html?project=modal-digital-01" class="modal-cta-btn">view project</a>
+        <h3>ANIMALE — VERÃO</h3>
+        <p>New In · 2026</p>
+        <a href="digital-campaigns.html?project=modal-digital-verao" class="modal-cta-btn">view project</a>
       </div>
     </div>
   </div>
@@ -346,6 +362,32 @@
         <h3>ANIMALE — WESTERN MEDIA</h3>
         <p>Digital Campaign · Video · 2025</p>
         <a href="digital-campaigns.html?project=modal-digital-02" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-digital-01" class="modal-overlay" onclick="closeModal(event, 'modal-digital-01')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE ORO — NEW IN</h3>
+        <p>Digital Campaign · Video · 2025</p>
+        <a href="digital-campaigns.html?project=modal-digital-01" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-digital-serpent" class="modal-overlay" onclick="closeModal(event, 'modal-digital-serpent')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="THUMBS/DIGITAL_CAMPAIGNS_04.jpg" alt="ANIMALE ORO — SERPENT DANCE">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE ORO — SERPENT DANCE</h3>
+        <p>Digital Campaign · Video · 2025</p>
+        <a href="digital-campaigns.html?project=modal-digital-serpent" class="modal-cta-btn">view project</a>
       </div>
     </div>
   </div>
