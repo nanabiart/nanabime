@@ -240,11 +240,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.8rem;
 }
 
 .social-btn-img {
-  height: 48px;
+  height: 40px;
   width: auto;
   transition: transform 0.2s ease;
 }
@@ -710,7 +710,7 @@ body {
   }
 
   .social-btn-img {
-    height: 40px;
+    height: 30px;
   }
 
   .projects-grid {
