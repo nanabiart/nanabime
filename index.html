@@ -69,10 +69,18 @@
         </div>
 
         <!-- CRM -->
+        <div class="project-card" onclick="openModal('modal-crm-galeria')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="AGENDAS/AGENDA_GALERIA_BOTANICA_PAC3/001_capa.jpg" alt="ANIMALE — GALERIA BOTÂNICA"></div>
+          <div class="card-info">
+            <h3>ANIMALE — GALERIA BOTÂNICA</h3>
+            <p>Interactive Catalog · New In · 2026</p>
+          </div>
+        </div>
+
         <div class="project-card" onclick="openModal('modal-crm-01')" style="cursor: pointer;">
           <div class="card-thumb"><img src="THUMBS/CRM_01.jpg" alt="ANIMALE — ALTO INVERNO 26"></div>
           <div class="card-info">
-            <h3>ANIMALE — ALTO INVERNO 26</h3>
+            <h3>ANIMALE — ALTO INVERNO</h3>
             <p>Email · New In · 2026</p>
           </div>
         </div>
@@ -93,15 +101,23 @@
           </div>
         </div>
 
-        <div class="project-card" onclick="openModal('modal-crm-04')" style="cursor: pointer;">
+        <!-- PROJETOS OCULTOS (EXIBIDOS AO CLICAR EM "LOAD MORE") -->
+
+        <div class="project-card hidden-project" onclick="openModal('modal-crm-05')" style="cursor: pointer;">
+          <div class="card-thumb"><img src="AGENDAS/AGENDA_ORO_MAIO/agenda_novidades_oro_12mai.jpg" alt="ANIMALE ORO — NOVIDADES MAIO"></div>
+          <div class="card-info">
+            <h3>ANIMALE ORO — NOVIDADES MAIO</h3>
+            <p>Interactive Catalog · Launch · 2026</p>
+          </div>
+        </div>
+
+        <div class="project-card hidden-project" onclick="openModal('modal-crm-04')" style="cursor: pointer;">
           <div class="card-thumb"><img src="THUMBS/CRM_04.jpg" alt="ANIMALE — DIA DAS MÃES"></div>
           <div class="card-info">
             <h3>ANIMALE — DIA DAS MÃES</h3>
             <p>Email · Campaign · 2025</p>
           </div>
         </div>
-
-        <!-- PROJETOS OCULTOS (EXIBIDOS AO CLICAR EM "LOAD MORE") -->
 
         <!-- DIGITAL CAMPAIGNS -->
         <div class="project-card hidden-project" onclick="openModal('modal-digital-verao')" style="cursor: pointer;">
@@ -156,7 +172,7 @@
         <div class="project-card hidden-project" onclick="openModal('modal-ui-03')" style="cursor: pointer;">
           <div class="card-thumb"><img src="THUMBS/UI_03.jpg" alt="ANIMALE — ALTO VERÃO 26"></div>
           <div class="card-info">
-            <h3>ANIMALE — ALTO VERÃO 26</h3>
+            <h3>ANIMALE — ALTO VERÃO</h3>
             <p>Homepage · UI Design · 2025</p>
           </div>
         </div>
@@ -267,7 +283,7 @@
       </div>
       <div class="modal-fixed-footer">
         <h3>JOHNNIE WALKER — LOLLAPALOOZA</h3>
-        <p>Art Direction · Real Time  · 2026</p>
+        <p>Art Direction · Real Time · 2026</p>
         <a href="art-direction.html?project=modal-johnnie-walker" class="modal-cta-btn">view project</a>
       </div>
     </div>
@@ -287,6 +303,19 @@
   </div>
 
   <!-- CRM -->
+  <div id="modal-crm-galeria" class="modal-overlay" onclick="closeModal(event, 'modal-crm-galeria')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="AGENDAS/AGENDA_GALERIA_BOTANICA_PAC3/001_capa.jpg" alt="ANIMALE — GALERIA BOTÂNICA">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE — GALERIA BOTÂNICA</h3>
+        <p>Interactive Catalog · New In · 2026</p>
+        <a href="crm.html?project=modal-crm-galeria" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
   <div id="modal-crm-01" class="modal-overlay" onclick="closeModal(event, 'modal-crm-01')">
     <div class="modal-card modal-home" onclick="event.stopPropagation()">
       <div class="modal-media-scroll">
@@ -326,6 +355,19 @@
     </div>
   </div>
 
+  <div id="modal-crm-05" class="modal-overlay" onclick="closeModal(event, 'modal-crm-05')">
+    <div class="modal-card modal-home" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll">
+        <img src="AGENDAS/AGENDA_ORO_MAIO/agenda_novidades_oro_12mai.jpg" alt="ANIMALE ORO — NOVIDADES MAIO">
+      </div>
+      <div class="modal-fixed-footer">
+        <h3>ANIMALE ORO — NOVIDADES MAIO</h3>
+        <p>Interactive Catalog · Launch · 2025</p>
+        <a href="crm.html?project=modal-crm-05" class="modal-cta-btn">view project</a>
+      </div>
+    </div>
+  </div>
+
   <div id="modal-crm-04" class="modal-overlay" onclick="closeModal(event, 'modal-crm-04')">
     <div class="modal-card modal-home" onclick="event.stopPropagation()">
       <div class="modal-media-scroll">
@@ -346,8 +388,8 @@
         <img src="THUMBS/DIGITAL_CAMPAIGNS_03.jpg" alt="ANIMALE — VERÃO">
       </div>
       <div class="modal-fixed-footer">
-        <h3>ANIMALE — VERÃO</h3>
-        <p>New In · 2026</p>
+        <h3>ANIMALE — FLORESTANIA</h3>
+        <p>Digital Campaign · New In · 2026</p>
         <a href="digital-campaigns.html?project=modal-digital-verao" class="modal-cta-btn">view project</a>
       </div>
     </div>
@@ -425,7 +467,7 @@
         <img src="THUMBS/UI_03.jpg" alt="ANIMALE — ALTO VERÃO 26">
       </div>
       <div class="modal-fixed-footer">
-        <h3>ANIMALE — ALTO VERÃO </h3>
+        <h3>ANIMALE — ALTO VERÃO</h3>
         <p>Homepage · UI Design · 2025</p>
         <a href="ui-design.html?project=modal-ui-03" class="modal-cta-btn">view project</a>
       </div>
@@ -438,7 +480,7 @@
         <img src="THUMBS/UI_04.jpg" alt="ANIMALE — INVERNO 26">
       </div>
       <div class="modal-fixed-footer">
-        <h3>ANIMALE — INVERNO</h3>
+        <h3>ANIMALE — ON TOUR</h3>
         <p>Homepage · UI Design · 2026</p>
         <a href="ui-design.html?project=modal-ui-04" class="modal-cta-btn">view project</a>
       </div>
@@ -479,7 +521,7 @@
         <img src="THUMBS/OOH_01.jpg" alt="ANIMALE — INVERNO 26">
       </div>
       <div class="modal-fixed-footer">
-        <h3>ANIMALE — INVERNO</h3>
+        <h3>ANIMALE — ON TOUR</h3>
         <p>OOH · Aeroporto Santos Dumont · 2026</p>
         <a href="ooh.html?project=modal-ooh-01" class="modal-cta-btn">view project</a>
       </div>
