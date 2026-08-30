@@ -1,190 +1,151 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Digital Campaigns — nanabi</title>
 
-
-
   <!-- FAVICON -->
-
   <link rel="icon" type="image/png" href="star.png">
 
-
-
   <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
 
-
-
   <header class="project-header">
-
     <a href="index.html" class="back-link">← back to home</a>
-
     <h1 class="category-title">Digital Campaigns</h1>
-
   </header>
 
-
-
   <main class="gallery-container">
-
     <div class="projects-grid">
 
-
-
-      <!-- CARD 1: ANIMALE ORO — JUNHO 25 -->
-
-      <div class="project-card" onclick="openModal('modal-digital-01')" style="cursor: pointer;">
-
+      <!-- 1: SERPENT DANCE -->
+      <div class="project-card" onclick="openModal('modal-digital-serpent')" style="cursor: pointer;">
         <div class="card-thumb">
-
-          <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO 25">
-
+          <img src="THUMBS/DIGITAL_CAMPAIGNS_04.jpg" alt="ANIMALE ORO — SERPENT DANCE">
         </div>
-
         <div class="card-info">
-
-          <h3>ANIMALE ORO — NEW IN</h3>
-
+          <h3>ANIMALE ORO — SERPENT DANCE</h3>
           <p>Digital Campaign · Video · 2025</p>
-
         </div>
-
       </div>
 
-
-
-      <!-- CARD 2: ANIMALE — WESTERN MEDIA -->
-
+      <!-- 2: WESTERN -->
       <div class="project-card" onclick="openModal('modal-digital-02')" style="cursor: pointer;">
-
         <div class="card-thumb">
-
           <img src="THUMBS/DIGITAL_CAMPAIGNS_02.jpg" alt="ANIMALE — WESTERN MEDIA">
-
         </div>
-
         <div class="card-info">
-
           <h3>ANIMALE — WESTERN MEDIA</h3>
-
           <p>Digital Campaign · Video · 2025</p>
-
         </div>
-
       </div>
 
+      <!-- 3: ORO JUNHO -->
+      <div class="project-card" onclick="openModal('modal-digital-01')" style="cursor: pointer;">
+        <div class="card-thumb">
+          <img src="THUMBS/DIGITAL_CAMPAIGNS_01.jpg" alt="ANIMALE ORO — JUNHO">
+        </div>
+        <div class="card-info">
+          <h3>ANIMALE ORO — NEW IN</h3>
+          <p>Digital Campaign · Video · 2025</p>
+        </div>
+      </div>
 
+      <!-- 4: NEW IN (ANIMALE - VERÃO) -->
+      <div class="project-card" onclick="openModal('modal-digital-verao')" style="cursor: pointer;">
+        <div class="card-thumb">
+          <img src="THUMBS/DIGITAL_CAMPAIGNS_03.jpg" alt="ANIMALE — VERÃO">
+        </div>
+        <div class="card-info">
+          <h3>ANIMALE — VERÃO</h3>
+          <p>New In · 2026</p>
+        </div>
+      </div>
 
     </div>
-
   </main>
-
-
 
   <!-- ==================== MODAIS DE DIGITAL CAMPAIGNS ==================== -->
 
-
-
-  <!-- MODAL 1: ANIMALE ORO — JUNHO 25 -->
-
-  <div id="modal-digital-01" class="modal-overlay" onclick="closeModal(event, 'modal-digital-01')">
-
+  <!-- MODAL 1: SERPENT DANCE -->
+  <div id="modal-digital-serpent" class="modal-overlay" onclick="closeModal(event, 'modal-digital-serpent')">
     <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
-
       <div class="modal-media-scroll" style="background-color: #ffffff; overflow: hidden; display: flex; justify-content: center;">
-
         <iframe 
-
           style="border: none; border-radius: 6px; width: 800px; max-width: 100%; height: 500px; background-color: #ffffff;" 
-
-          src="https://embed.figma.com/proto/F3x8olmVaANYgZ93giisVo/Untitled?node-id=31-94&page-id=31%3A93&scaling=scale-down-width&content-scaling=fixed&embed-host=share&hide-ui=1&muted=1" 
-
-          allow="autoplay 'none'; audio 'none'"
-
-          allowfullscreen>
-
-        </iframe>
-
-      </div>
-
-      <div class="modal-fixed-sidebar">
-
-        <h3>ANIMALE ORO<br>JUNHO</h3>
-
-        <p>Digital campaign focused on the rollout of ANIMALE ORO’s June launch across multiple digital channels. My role involved adapting the campaign videos into a range of formats and specifications for paid media, YouTube, Meta, and Pinterest, tailoring each asset to its platform while preserving the campaign’s visual language and the jewelry’s aesthetic.</p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- MODAL 2: ANIMALE — WESTERN MEDIA -->
-
-  <div id="modal-digital-02" class="modal-overlay" onclick="closeModal(event, 'modal-digital-02')">
-
-    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
-
-      <div class="modal-media-scroll" style="background-color: #ffffff; overflow: hidden; display: flex; justify-content: center;">
-
-        <iframe 
-
-          style="border: none; border-radius: 6px; width: 800px; max-width: 100%; height: 500px; background-color: #ffffff;" 
-
           src="https://embed.figma.com/proto/F3x8olmVaANYgZ93giisVo/Untitled?node-id=27-15&page-id=27%3A14&scaling=scale-down-width&content-scaling=fixed&embed-host=share&hide-ui=1&muted=1" 
-
           allow="autoplay 'none'; audio 'none'"
-
           allowfullscreen>
-
         </iframe>
-
       </div>
-
       <div class="modal-fixed-sidebar">
-
-        <h3>ANIMALE<br>WESTERN MEDIA</h3>
-
-        <p>Digital campaign developed from a sales opportunity driven by the Western trend. The project explored a selection of ANIMALE products that connected with the trend, translating the direction into a creative visual concept and adapting it into media formats for Pinterest and Meta.</p>
-
+        <h3>ANIMALE ORO<br>SERPENT DANCE</h3>
+        <p>Digital campaign for ANIMALE ORO's Serpent Dance launch. Adapting campaign video and visual language into targeted high-impact media formats.</p>
       </div>
-
     </div>
-
   </div>
 
+  <!-- MODAL 2: WESTERN MEDIA -->
+  <div id="modal-digital-02" class="modal-overlay" onclick="closeModal(event, 'modal-digital-02')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll" style="background-color: #ffffff; overflow: hidden; display: flex; justify-content: center;">
+        <iframe 
+          style="border: none; border-radius: 6px; width: 800px; max-width: 100%; height: 500px; background-color: #ffffff;" 
+          src="https://embed.figma.com/proto/F3x8olmVaANYgZ93giisVo/Untitled?node-id=27-15&page-id=27%3A14&scaling=scale-down-width&content-scaling=fixed&embed-host=share&hide-ui=1&muted=1" 
+          allow="autoplay 'none'; audio 'none'"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE<br>WESTERN MEDIA</h3>
+        <p>Digital campaign developed from a sales opportunity driven by the Western trend. The project explored a selection of ANIMALE products that connected with the trend, translating the direction into a creative visual concept and adapting it into media formats for Pinterest and Meta.</p>
+      </div>
+    </div>
+  </div>
 
+  <!-- MODAL 3: ORO JUNHO (VÍDEO MP4) -->
+  <div id="modal-digital-01" class="modal-overlay" onclick="closeModal(event, 'modal-digital-01')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll" style="background-color: #ffffff; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+        <video autoplay loop muted playsinline style="width: 100%; max-width: 800px; height: auto; border-radius: 6px; display: block;">
+          <source src="DIGITAL_CAMP/ORO_JUNHO_VIDEO_COMP.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE ORO<br>JUNHO</h3>
+        <p>Digital campaign focused on the rollout of ANIMALE ORO’s June launch across multiple digital channels. My role involved adapting the campaign videos into a range of formats and specifications for paid media, YouTube, Meta, and Pinterest, tailoring each asset to its platform while preserving the campaign’s visual language and the jewelry’s aesthetic.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: NEW IN (ANIMALE - VERÃO) -->
+  <div id="modal-digital-verao" class="modal-overlay" onclick="closeModal(event, 'modal-digital-verao')">
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+      <div class="modal-media-scroll" style="background-color: #ffffff; overflow: hidden; display: flex; justify-content: center;">
+        <iframe 
+          style="border: none; border-radius: 6px; width: 800px; max-width: 100%; height: 500px; background-color: #ffffff;" 
+          src="https://embed.figma.com/proto/F3x8olmVaANYgZ93giisVo/Untitled?node-id=27-15&page-id=27%3A14&scaling=scale-down-width&content-scaling=fixed&embed-host=share&hide-ui=1&muted=1" 
+          allow="autoplay 'none'; audio 'none'"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="modal-fixed-sidebar">
+        <h3>ANIMALE<br>VERÃO</h3>
+        <p>Digital campaign for ANIMALE Verão collection release, focusing on New In product highlights and channel adaptations.</p>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
-
     <p>© 2026 nanabi</p>
-
   </footer>
 
-
-
   <script src="script.js"></script>
-
 </body>
-
-</html> 
-
+</html>
