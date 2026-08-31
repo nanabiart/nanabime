@@ -685,7 +685,6 @@ body {
     width: 100%;
   }
 
-  /* UNIFORMIZAÇÃO DAS FONTES NO MOBILE (ABOUT & TOOLS) */
   .about-text {
     font-size: 1rem;
     text-align: center;
@@ -730,71 +729,52 @@ body {
   }
 
   .modal-overlay {
-    padding: 1rem;
-  }
-
-  /* AJUSTE DO BOTÃO FECHAR NO MOBILE */
-  .modal-close-btn {
-    top: 0.6rem;
-    right: 0.6rem;
-    width: 28px;
-    height: 28px;
-    font-size: 1.1rem;
-  }
-
-  /* MOBILE DA HOME */
-  .modal-card.modal-home {
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    max-height: 85vh;
     padding: 0.8rem;
-    padding-top: 2.2rem;
-    overflow-y: auto;
-    position: relative;
   }
 
+  /* BOTÃO CLOSE DISCRETO E DISCRETO */
+  .modal-close-btn {
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 22px;
+    height: 22px;
+    font-size: 0.85rem;
+    background-color: #eeeeee;
+  }
+
+  /* ESTRUTURA DO MODAL NO MOBILE (RESOLVE A ROLAGEM) */
+  .modal-card.modal-sidebar,
+  .modal-card.modal-home {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 82vh !important;
+    max-height: 82vh !important;
+    padding: 0.8rem !important;
+    padding-top: 2rem !important;
+    gap: 0.8rem !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  /* ROLAGEM DA MÍDIA (CIMA) */
+  .modal-card.modal-sidebar .modal-media-scroll,
   .modal-card.modal-home .modal-media-scroll {
-    flex: initial;
-    max-height: 50vh;
-  }
-
-  /* MOBILE DAS ESPECIALIDADES (PADRONIZAÇÃO DA ROLAGEM DE TEXTO) */
-  .modal-card.modal-sidebar {
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    max-height: 85vh;
-    padding: 1rem;
-    padding-top: 2.5rem;
-    gap: 1rem;
-    overflow-y: auto;
+    flex: 0 0 50% !important;
+    max-height: 50% !important;
+    width: 100% !important;
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
-    position: relative;
   }
 
-  .modal-card.modal-sidebar .modal-media-scroll {
-    max-width: 100%;
-    max-height: 45vh;
-    overflow-y: auto;
-    flex-shrink: 0;
-  }
-
-  .modal-card.modal-sidebar .modal-media-scroll iframe {
-    min-height: 380px;
-  }
-
-  .modal-card.modal-sidebar .modal-media-scroll iframe[src*="instagram.com"] {
-    height: 480px !important;
-  }
-
-  .modal-card.modal-sidebar .modal-fixed-sidebar {
-    width: 100%;
-    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
-    gap: 0.5rem;
-    flex-shrink: 0;
-    max-height: 30vh;
+  /* ROLAGEM DO TEXTO (BAIXO) */
+  .modal-card.modal-sidebar .modal-fixed-sidebar,
+  .modal-card.modal-home .modal-fixed-footer {
+    flex: 1 !important;
+    width: 100% !important;
+    max-height: none !important;
+    padding: 0.4rem 0.2rem !important;
+    gap: 0.5rem !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
   }
