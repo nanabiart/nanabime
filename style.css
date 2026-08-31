@@ -371,7 +371,7 @@ body {
 }
 
 /* ===================================================
-   MODAIS DE VISUALIZAÇÃO
+   MODAIS DE VISUALIZAÇÃO (DESKTOP)
    =================================================== */
 
 /* OVERLAY TRANSLÚCIDO COM BLUR */
@@ -401,38 +401,38 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
-  padding: 1rem;
+  padding: 1.2rem;
   position: relative;
 }
 
-/* BOTÃO FECHAR / MINIMIZAR MODAL */
+/* BOTÃO FECHAR DESKTOP */
 .modal-close-btn {
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
   background-color: #f1f1f1;
-  color: #333333;
+  color: #555555;
   border: none;
   border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  font-size: 1.2rem;
+  width: 26px;
+  height: 26px;
+  font-size: 0.9rem;
   line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-  z-index: 1200;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  z-index: 9999;
 }
 
-.modal-close-btn:hover {
+.modal-close-btn:hover,
+.modal-close-btn:active {
   background-color: #332B36;
   color: #ffffff;
-  transform: scale(1.08);
 }
 
-/* 1. LAYOUT DA HOME (TEXTO ABAIXO DA MÍDIA) */
+/* 1. LAYOUT DA HOME */
 .modal-card.modal-home {
   width: 100%;
   max-width: 560px;
@@ -479,7 +479,7 @@ body {
   line-height: 1.4;
 }
 
-/* BOTÃO CTA NOS MODAIS DA HOME (VIEW PROJECT) */
+/* BOTÃO CTA (VIEW PROJECT / OPEN PROTOTYPE) */
 .modal-cta-btn {
   display: inline-block;
   margin-top: 0.8rem;
@@ -500,7 +500,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* 2. LAYOUT DAS ESPECIALIDADES (SIDEBAR FIXA À DIREITA) */
+/* 2. LAYOUT DAS ESPECIALIDADES (SIDEBAR DESKTOP) */
 .modal-card.modal-sidebar {
   width: 100%;
   max-width: 1120px;
@@ -530,7 +530,6 @@ body {
   border-radius: 6px;
 }
 
-/* PROTÓTIPOS EMBUTIDOS (FIGMA / IFRAMES / EMBEDS) */
 .modal-card.modal-sidebar .modal-media-scroll iframe {
   width: 100%;
   height: 100%;
@@ -541,7 +540,6 @@ body {
   background-color: #ffffff !important;
 }
 
-/* AJUSTE EXCLUSIVO PARA EMBEDS DO INSTAGRAM */
 .modal-card.modal-sidebar .modal-media-scroll iframe[src*="instagram.com"] {
   width: 100%;
   max-width: 480px;
@@ -576,7 +574,6 @@ body {
   line-height: 1.55;
 }
 
-/* BARRA DE ROLAGEM DISCRETA NAS MÍDIAS E SIDEBAR */
 .modal-media-scroll::-webkit-scrollbar,
 .modal-fixed-sidebar::-webkit-scrollbar {
   width: 4px;
@@ -611,7 +608,10 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* REGRAS RESPONSIVAS (TABLET E MOBILE) */
+/* ===================================================
+   REGRAS RESPONSIVAS EXCLUSIVAS PARA MOBILE
+   =================================================== */
+
 @media (max-width: 1024px) {
   .hero h1 { font-size: 2.8rem; }
   .tab-btn { font-size: 1.8rem; }
@@ -729,68 +729,69 @@ body {
   }
 
   .modal-overlay {
-    padding: 1rem;
+    padding: 1.2rem;
   }
 
-  /* BOTÃO CLOSE (FIXO NO CANTO E CAPTURA O TOQUE) */
+  /* BOTÃO CLOSE NO MOBILE (FUNDO CINZA CLARO NO TOPO BRANCO) */
   .modal-close-btn {
-    position: absolute !important;
     top: 0.6rem !important;
     right: 0.6rem !important;
     width: 26px !important;
     height: 26px !important;
-    font-size: 0.95rem !important;
-    background-color: #332B36 !important;
-    color: #ffffff !important;
-    border-radius: 50% !important;
+    font-size: 0.9rem !important;
+    background-color: #f1f1f1 !important;
+    color: #555555 !important;
     z-index: 9999 !important;
     pointer-events: auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    border: none !important;
   }
 
-  /* CARD DO MODAL (LIMITADO À TELA PARA PERMITIR ROLAGEM) */
+  .modal-close-btn:hover,
+  .modal-close-btn:active {
+    background-color: #332B36 !important;
+    color: #ffffff !important;
+  }
+
+  /* ESTRUTURA DE JANELA FLUTUANTE NO MOBILE */
   .modal-card.modal-sidebar,
   .modal-card.modal-home {
     flex-direction: column !important;
     width: 100% !important;
     max-width: 380px !important;
-    height: 78vh !important;
-    max-height: 78vh !important;
-    padding: 1rem !important;
+    height: auto !important;
+    max-height: 78vh !important; /* Cria o respiro em cima e embaixo */
+    padding: 0.8rem !important;
+    padding-top: 2.2rem !important; /* Espaço pro botão × ficar no topo */
     gap: 0.8rem !important;
     position: relative !important;
     overflow: hidden !important;
   }
 
-  /* MÍDIA (CIMA) */
+  /* MÍDIA COMO ELEMENTO PRINCIPAL */
   .modal-card.modal-sidebar .modal-media-scroll,
   .modal-card.modal-home .modal-media-scroll {
-    flex: 0 0 45% !important;
-    max-height: 45% !important;
+    flex: 0 0 auto !important;
+    max-height: 48vh !important;
     width: 100% !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* TEXTO (BAIXO - COM ROLAGEM INDEPENDENTE) */
+  /* TEXTO COMPACTO COM ROLAGEM INTERNA AUTOMÁTICA */
   .modal-card.modal-sidebar .modal-fixed-sidebar,
   .modal-card.modal-home .modal-fixed-footer {
     width: 100% !important;
     flex: 1 1 auto !important;
-    max-height: none !important;
+    max-height: 22vh !important; /* Limita a altura do texto */
     padding: 0.2rem 0 !important;
-    gap: 0.6rem !important;
-    overflow-y: auto !important;
+    gap: 0.4rem !important;
+    overflow-y: auto !important; /* Ativa rolagem interna se o texto for longo */
     -webkit-overflow-scrolling: touch;
     text-align: left !important;
   }
 
   .modal-fixed-sidebar h3,
   .modal-fixed-footer h3 {
-    font-size: 1.05rem !important;
+    font-size: 1rem !important;
   }
 
   .modal-fixed-sidebar p,
