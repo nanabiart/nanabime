@@ -726,9 +726,6 @@ body {
 
   .modal-overlay {
     padding: 1rem !important;
-    overflow: hidden !important;
-    align-items: center !important;
-    justify-content: center !important;
   }
 
   .modal-close-btn {
@@ -749,46 +746,28 @@ body {
     color: #ffffff !important;
   }
 
-  /* ===================================================
-     JANELAS INTERNAS — MOBILE
-     UI DESIGN / IN THE STREETS / CRM / OOH / ETC
-     =================================================== */
+  /* REGRAS EXCLUSIVAS DAS PÁGINAS INTERNAS
+     (CRM, UI DESIGN, OOH, ETC) */
 
   .modal-card.modal-sidebar {
     flex-direction: column !important;
     width: 100% !important;
     max-width: 380px !important;
-
-    /* Card fixo e centralizado */
     height: 72vh !important;
     max-height: 72vh !important;
-
-    margin: 0 !important;
-
+    margin: auto !important;
     padding: 0.8rem !important;
     padding-top: 2.2rem !important;
-
     gap: 0.6rem !important;
-
     position: relative !important;
     overflow: hidden !important;
   }
 
-  /*
-     ÁREA DA IMAGEM
-
-     A imagem recebe a maior parte da janela.
-     A própria imagem mantém sua proporção original
-     e se adapta à largura disponível.
-  */
+  /* ÁREA DA IMAGEM — MOBILE */
   .modal-card.modal-sidebar .modal-media-scroll {
-    flex: 1 1 68% !important;
-
+    flex: 0 0 65% !important;
+    max-height: 65% !important;
     width: 100% !important;
-    height: auto !important;
-
-    min-height: 0 !important;
-    max-height: none !important;
 
     overflow-y: auto !important;
     overflow-x: hidden !important;
@@ -798,65 +777,39 @@ body {
     background-color: #ffffff !important;
     border-radius: 6px;
 
-    display: flex !important;
-    align-items: flex-start !important;
-    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
-  /*
-     A mídia se adapta ao espaço disponível:
-
-     - mantém a proporção original;
-     - ocupa a largura disponível;
-     - não sofre crop;
-     - imagens horizontais ficam naturalmente maiores;
-     - imagens verticais continuam proporcionais;
-     - quando necessário, a área pode rolar.
-  */
+  /* IMAGEM */
   .modal-card.modal-sidebar .modal-media-scroll img,
   .modal-card.modal-sidebar .modal-media-scroll video {
+    display: block !important;
+
     width: 100% !important;
     max-width: 100% !important;
 
     height: auto !important;
-    max-height: 100% !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
 
     object-fit: contain !important;
     object-position: top center !important;
 
-    display: block !important;
-
     border-radius: 6px !important;
-
-    flex-shrink: 0 !important;
   }
 
-  /*
-     ÁREA DO TEXTO
-
-     Menor que a área da imagem.
-     O texto rola internamente quando necessário,
-     sem aumentar o tamanho do card.
-  */
+  /* ÁREA DO TEXTO */
   .modal-card.modal-sidebar .modal-fixed-sidebar {
     width: 100% !important;
-
-    flex: 0 0 32% !important;
-
-    height: 32% !important;
-    max-height: 32% !important;
-
-    min-height: 0 !important;
-
+    flex: 1 1 auto !important;
+    max-height: 35% !important;
     padding: 0.2rem 0 !important;
-
     gap: 0.4rem !important;
-
     overflow-y: auto !important;
-    overflow-x: hidden !important;
-
     -webkit-overflow-scrolling: touch;
-
     text-align: left !important;
   }
 
