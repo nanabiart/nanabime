@@ -308,7 +308,6 @@ body {
   gap: 1rem;
 }
 
-/* ESCONDE PROJETOS ADICIONAIS INICIALMENTE */
 .project-card.hidden-project {
   display: none !important;
 }
@@ -374,7 +373,6 @@ body {
    MODAIS DE VISUALIZAÇÃO (DESKTOP)
    =================================================== */
 
-/* OVERLAY TRANSLÚCIDO COM BLUR */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -395,7 +393,6 @@ body {
   display: flex;
 }
 
-/* BASE COMUM DO CARD */
 .modal-card {
   background-color: #ffffff;
   border-radius: 12px;
@@ -405,7 +402,6 @@ body {
   position: relative;
 }
 
-/* BOTÃO FECHAR DESKTOP */
 .modal-close-btn {
   position: absolute;
   top: 0.8rem;
@@ -432,7 +428,7 @@ body {
   color: #ffffff;
 }
 
-/* 1. LAYOUT DA HOME */
+/* LAYOUT DA HOME DESKTOP */
 .modal-card.modal-home {
   width: 100%;
   max-width: 560px;
@@ -479,7 +475,6 @@ body {
   line-height: 1.4;
 }
 
-/* BOTÃO CTA (VIEW PROJECT / OPEN PROTOTYPE) */
 .modal-cta-btn {
   display: inline-block;
   margin-top: 0.8rem;
@@ -500,7 +495,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* 2. LAYOUT DAS ESPECIALIDADES (SIDEBAR DESKTOP) */
+/* LAYOUT DAS ESPECIALIDADES DESKTOP */
 .modal-card.modal-sidebar {
   width: 100%;
   max-width: 1120px;
@@ -585,7 +580,7 @@ body {
   border-radius: 3px;
 }
 
-/* FOOTER COPYRIGHT & BACK TO TOP */
+/* FOOTER */
 .site-footer {
   text-align: center;
   padding: 6rem 0 3rem 0;
@@ -728,15 +723,10 @@ body {
     font-size: 2.2rem;
   }
 
-  /* CENTRALIZAÇÃO PERFEITA NO EIXO VERTICAL */
   .modal-overlay {
     padding: 1rem !important;
-    display: flex !important;
-    align-items: center !important;     /* Centraliza verticalmente no meio da tela */
-    justify-content: center !important;  /* Centraliza horizontalmente */
   }
 
-  /* BOTÃO CLOSE NO MOBILE (FUNDO CINZA CLARO NO TOPO BRANCO) */
   .modal-close-btn {
     top: 0.6rem !important;
     right: 0.6rem !important;
@@ -755,52 +745,45 @@ body {
     color: #ffffff !important;
   }
 
-  /* ESTRUTURA DE JANELA FLUTUANTE CENTRALIZADA */
-  .modal-card.modal-sidebar,
-  .modal-card.modal-home {
+  /* REGRAS EXCLUSIVAS DAS PÁGINAS INTERNAS (CRM, UI DESIGN, OOH, ETC) */
+  .modal-card.modal-sidebar {
     flex-direction: column !important;
     width: 100% !important;
     max-width: 380px !important;
-    height: auto !important;             /* Altura adaptável ao conteúdo */
-    max-height: 80vh !important;         /* Limite proporcional na tela */
-    margin: auto !important;             /* Força o alinhamento central */
+    height: 72vh !important;
+    max-height: 72vh !important;
+    margin: auto !important;
     padding: 0.8rem !important;
-    padding-top: 2.2rem !important;     /* Espaço para o botão × ficar no topo */
-    gap: 0.8rem !important;
+    padding-top: 2.2rem !important;
+    gap: 0.6rem !important;
     position: relative !important;
     overflow: hidden !important;
   }
 
-  /* MÍDIA COMO ELEMENTO PRINCIPAL */
-  .modal-card.modal-sidebar .modal-media-scroll,
-  .modal-card.modal-home .modal-media-scroll {
-    flex: 0 0 auto !important;
-    max-height: 48vh !important;
+  .modal-card.modal-sidebar .modal-media-scroll {
+    flex: 0 0 65% !important;
+    max-height: 65% !important;
     width: 100% !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* TEXTO COMPACTO COM ROLAGEM INTERNA AUTOMÁTICA */
-  .modal-card.modal-sidebar .modal-fixed-sidebar,
-  .modal-card.modal-home .modal-fixed-footer {
+  .modal-card.modal-sidebar .modal-fixed-sidebar {
     width: 100% !important;
     flex: 1 1 auto !important;
-    max-height: 22vh !important;         /* Limita a altura do texto */
+    max-height: 35% !important;
     padding: 0.2rem 0 !important;
     gap: 0.4rem !important;
-    overflow-y: auto !important;         /* Ativa rolagem interna se o texto for longo */
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     text-align: left !important;
   }
 
-  .modal-fixed-sidebar h3,
-  .modal-fixed-footer h3 {
+  .modal-fixed-sidebar h3 {
     font-size: 1rem !important;
   }
 
-  .modal-fixed-sidebar p,
-  .modal-fixed-footer p {
+  .modal-fixed-sidebar p {
     font-size: 0.85rem !important;
     line-height: 1.45 !important;
   }
