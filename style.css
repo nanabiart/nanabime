@@ -728,8 +728,12 @@ body {
     font-size: 2.2rem;
   }
 
+  /* CENTRALIZAÇÃO PERFEITA NO EIXO VERTICAL */
   .modal-overlay {
-    padding: 1.2rem;
+    padding: 1rem !important;
+    display: flex !important;
+    align-items: center !important;     /* Centraliza verticalmente no meio da tela */
+    justify-content: center !important;  /* Centraliza horizontalmente */
   }
 
   /* BOTÃO CLOSE NO MOBILE (FUNDO CINZA CLARO NO TOPO BRANCO) */
@@ -751,16 +755,17 @@ body {
     color: #ffffff !important;
   }
 
-  /* ESTRUTURA DE JANELA FLUTUANTE NO MOBILE */
+  /* ESTRUTURA DE JANELA FLUTUANTE CENTRALIZADA */
   .modal-card.modal-sidebar,
   .modal-card.modal-home {
     flex-direction: column !important;
     width: 100% !important;
     max-width: 380px !important;
-    height: auto !important;
-    max-height: 78vh !important; /* Cria o respiro em cima e embaixo */
+    height: auto !important;             /* Altura adaptável ao conteúdo */
+    max-height: 80vh !important;         /* Limite proporcional na tela */
+    margin: auto !important;             /* Força o alinhamento central */
     padding: 0.8rem !important;
-    padding-top: 2.2rem !important; /* Espaço pro botão × ficar no topo */
+    padding-top: 2.2rem !important;     /* Espaço para o botão × ficar no topo */
     gap: 0.8rem !important;
     position: relative !important;
     overflow: hidden !important;
@@ -781,10 +786,10 @@ body {
   .modal-card.modal-home .modal-fixed-footer {
     width: 100% !important;
     flex: 1 1 auto !important;
-    max-height: 22vh !important; /* Limita a altura do texto */
+    max-height: 22vh !important;         /* Limita a altura do texto */
     padding: 0.2rem 0 !important;
     gap: 0.4rem !important;
-    overflow-y: auto !important; /* Ativa rolagem interna se o texto for longo */
+    overflow-y: auto !important;         /* Ativa rolagem interna se o texto for longo */
     -webkit-overflow-scrolling: touch;
     text-align: left !important;
   }
