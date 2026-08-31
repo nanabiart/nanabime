@@ -728,6 +728,11 @@ body {
     padding: 1rem !important;
   }
 
+  /* SOBE AS JANELAS NO MOBILE */
+  .modal-card {
+    transform: translateY(-12vh);
+  }
+
   .modal-close-btn {
     top: 0.6rem !important;
     right: 0.6rem !important;
