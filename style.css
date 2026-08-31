@@ -730,7 +730,7 @@ body {
 
   /* SOBE AS JANELAS NO MOBILE */
   .modal-card {
-    transform: translateY(-12vh);
+    transform: translateY(-6vh);
   }
 
   .modal-close-btn {
