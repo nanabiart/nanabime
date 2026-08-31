@@ -729,54 +729,74 @@ body {
   }
 
   .modal-overlay {
-    padding: 0.8rem;
+    padding: 1rem;
   }
 
-  /* BOTÃO CLOSE DISCRETO E DISCRETO */
+  /* BOTÃO CLOSE (FIXO NO CANTO E CAPTURA O TOQUE) */
   .modal-close-btn {
-    top: 0.4rem;
-    right: 0.4rem;
-    width: 22px;
-    height: 22px;
-    font-size: 0.85rem;
-    background-color: #eeeeee;
+    position: absolute !important;
+    top: 0.6rem !important;
+    right: 0.6rem !important;
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 0.95rem !important;
+    background-color: #332B36 !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: none !important;
   }
 
-  /* ESTRUTURA DO MODAL NO MOBILE (RESOLVE A ROLAGEM) */
+  /* CARD DO MODAL (LIMITADO À TELA PARA PERMITIR ROLAGEM) */
   .modal-card.modal-sidebar,
   .modal-card.modal-home {
     flex-direction: column !important;
     width: 100% !important;
-    max-width: 100% !important;
-    height: 82vh !important;
-    max-height: 82vh !important;
-    padding: 0.8rem !important;
-    padding-top: 2rem !important;
+    max-width: 380px !important;
+    height: 78vh !important;
+    max-height: 78vh !important;
+    padding: 1rem !important;
     gap: 0.8rem !important;
     position: relative !important;
     overflow: hidden !important;
   }
 
-  /* ROLAGEM DA MÍDIA (CIMA) */
+  /* MÍDIA (CIMA) */
   .modal-card.modal-sidebar .modal-media-scroll,
   .modal-card.modal-home .modal-media-scroll {
-    flex: 0 0 50% !important;
-    max-height: 50% !important;
+    flex: 0 0 45% !important;
+    max-height: 45% !important;
     width: 100% !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* ROLAGEM DO TEXTO (BAIXO) */
+  /* TEXTO (BAIXO - COM ROLAGEM INDEPENDENTE) */
   .modal-card.modal-sidebar .modal-fixed-sidebar,
   .modal-card.modal-home .modal-fixed-footer {
-    flex: 1 !important;
     width: 100% !important;
+    flex: 1 1 auto !important;
     max-height: none !important;
-    padding: 0.4rem 0.2rem !important;
-    gap: 0.5rem !important;
+    padding: 0.2rem 0 !important;
+    gap: 0.6rem !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
+    text-align: left !important;
+  }
+
+  .modal-fixed-sidebar h3,
+  .modal-fixed-footer h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .modal-fixed-sidebar p,
+  .modal-fixed-footer p {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
   }
 
   .site-footer {
