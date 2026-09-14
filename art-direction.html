@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <header class="project-header">
@@ -23,7 +24,51 @@
   <main class="gallery-container">
     <div class="projects-grid">
 
-      <!-- CARD 1: JOHNNIE WALKER -->
+      <!-- CARD 1: NATURA -->
+      <div class="project-card" onclick="openModal('modal-natura')" style="cursor: pointer;">
+        <div class="card-thumb">
+          <img src="THUMBS/Art Direction_03.jpg" alt="NATURA — ROCK IN RIO 2026">
+        </div>
+        <div class="card-info">
+          <h3>NATURA — ROCK IN RIO 2026</h3>
+          <p>Art Direction · Real Time</p>
+        </div>
+      </div>
+
+      <!-- CARD 2: TIC TAC -->
+      <div class="project-card" onclick="openModal('modal-tictac')" style="cursor: pointer;">
+        <div class="card-thumb">
+          <img src="THUMBS/Art Direction_04.jpg" alt="TIC TAC — ROCK IN RIO 2026">
+        </div>
+        <div class="card-info">
+          <h3>TIC TAC — ROCK IN RIO 2026</h3>
+          <p>Art Direction · Real Time</p>
+        </div>
+      </div>
+
+      <!-- CARD 3: TRIDENT -->
+      <div class="project-card" onclick="openModal('modal-trident')" style="cursor: pointer;">
+        <div class="card-thumb">
+          <img src="THUMBS/Art Direction_05.jpg" alt="TRIDENT — ROCK IN RIO 2026">
+        </div>
+        <div class="card-info">
+          <h3>TRIDENT — ROCK IN RIO 2026</h3>
+          <p>Art Direction · Real Time</p>
+        </div>
+      </div>
+
+      <!-- CARD 4: VALE -->
+      <div class="project-card" onclick="openModal('modal-vale')" style="cursor: pointer;">
+        <div class="card-thumb">
+          <img src="THUMBS/Art Direction_06.jpg" alt="VALE — ROCK IN RIO 2026">
+        </div>
+        <div class="card-info">
+          <h3>VALE — ROCK IN RIO 2026</h3>
+          <p>Art Direction · Real Time</p>
+        </div>
+      </div>
+
+      <!-- CARD 5: JOHNNIE WALKER -->
       <div class="project-card" onclick="openModal('modal-johnnie-walker')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/Art Direction_01.jpg" alt="JOHNNIE WALKER — LOLLAPALOOZA 2026">
@@ -34,7 +79,7 @@
         </div>
       </div>
 
-      <!-- CARD 2: CIELO -->
+      <!-- CARD 6: CIELO -->
       <div class="project-card" onclick="openModal('modal-cielo')" style="cursor: pointer;">
         <div class="card-thumb">
           <img src="THUMBS/Art Direction_02.jpg" alt="CIELO — LOLLAPALOOZA 2026">
@@ -48,20 +93,177 @@
     </div>
   </main>
 
-  <!-- MODAL 1: JOHNNIE WALKER -->
-  <div id="modal-johnnie-walker" class="modal-overlay" onclick="closeModal(event, 'modal-johnnie-walker')">
+
+  <!-- ========================================================== -->
+  <!-- MODAL 1: NATURA -->
+  <!-- ========================================================== -->
+
+  <div id="modal-natura" class="modal-overlay" onclick="closeModal(event, 'modal-natura')">
+
     <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
 
-      <!-- BOTÃO FECHAR -->
-      <button class="modal-close-btn" onclick="closeModal(event, 'modal-johnnie-walker')" aria-label="Close">
+      <button class="modal-close-btn"
+              onclick="closeModal(event, 'modal-natura')"
+              aria-label="Close">
         ×
       </button>
 
       <div class="modal-media-scroll">
-        <img src="ART_DIR/FEED_JW.jpg" alt="JOHNNIE WALKER — LOLLAPALOOZA 2026" style="width: 100%; border-radius: 6px;">
+        <img src="THUMBS/Art Direction_03.jpg"
+             alt="NATURA — ROCK IN RIO 2026"
+             style="width: 100%; border-radius: 6px;">
       </div>
 
       <div class="modal-fixed-sidebar">
+
+        <h3>NATURA<br>ROCK IN RIO 2026</h3>
+
+        <p>
+          Real-time content created for Natura during Rock in Rio 2026, following the brand’s communication and the festival environment.
+        </p>
+
+        <p>
+          I worked with the NOW team as an Art Direction Assistant, supporting the creative planning and visual development of the content throughout the event.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================== -->
+  <!-- MODAL 2: TIC TAC -->
+  <!-- ========================================================== -->
+
+  <div id="modal-tictac" class="modal-overlay" onclick="closeModal(event, 'modal-tictac')">
+
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+
+      <button class="modal-close-btn"
+              onclick="closeModal(event, 'modal-tictac')"
+              aria-label="Close">
+        ×
+      </button>
+
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_04.jpg"
+             alt="TIC TAC — ROCK IN RIO 2026"
+             style="width: 100%; border-radius: 6px;">
+      </div>
+
+      <div class="modal-fixed-sidebar">
+
+        <h3>TIC TAC<br>ROCK IN RIO 2026</h3>
+
+        <p>
+          Art direction for Tic Tac’s real-time communication during Rock in Rio 2026, adapting the brand’s visual language to the festival.
+        </p>
+
+        <p>
+          As an Art Direction Assistant at NOW, I contributed to the planning and development of visual content created throughout the event.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================== -->
+  <!-- MODAL 3: TRIDENT -->
+  <!-- ========================================================== -->
+
+  <div id="modal-trident" class="modal-overlay" onclick="closeModal(event, 'modal-trident')">
+
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+
+      <button class="modal-close-btn"
+              onclick="closeModal(event, 'modal-trident')"
+              aria-label="Close">
+        ×
+      </button>
+
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_05.jpg"
+             alt="TRIDENT — ROCK IN RIO 2026"
+             style="width: 100%; border-radius: 6px;">
+      </div>
+
+      <div class="modal-fixed-sidebar">
+
+        <h3>TRIDENT<br>ROCK IN RIO 2026</h3>
+
+        <p>
+          Real-time communication for Trident during Rock in Rio 2026, developed for the festival’s fast-paced environment.
+        </p>
+
+        <p>
+          Working with the NOW team as an Art Direction Assistant, I supported the creative planning and visual development of the content.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================== -->
+  <!-- MODAL 4: VALE -->
+  <!-- ========================================================== -->
+
+  <div id="modal-vale" class="modal-overlay" onclick="closeModal(event, 'modal-vale')">
+
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+
+      <button class="modal-close-btn"
+              onclick="closeModal(event, 'modal-vale')"
+              aria-label="Close">
+        ×
+      </button>
+
+      <div class="modal-media-scroll">
+        <img src="THUMBS/Art Direction_06.jpg"
+             alt="VALE — ROCK IN RIO 2026"
+             style="width: 100%; border-radius: 6px;">
+      </div>
+
+      <div class="modal-fixed-sidebar">
+
+        <h3>VALE<br>ROCK IN RIO 2026</h3>
+
+        <p>
+          Visual content developed for Vale during Rock in Rio 2026, combining real-time communication with the festival context.
+        </p>
+
+        <p>
+          I worked alongside the NOW team as an Art Direction Assistant, supporting the creative process and development of content for the event.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================== -->
+  <!-- MODAL 5: JOHNNIE WALKER -->
+  <!-- ========================================================== -->
+
+  <div id="modal-johnnie-walker" class="modal-overlay" onclick="closeModal(event, 'modal-johnnie-walker')">
+
+    <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
+
+      <button class="modal-close-btn"
+              onclick="closeModal(event, 'modal-johnnie-walker')"
+              aria-label="Close">
+        ×
+      </button>
+
+      <div class="modal-media-scroll">
+        <img src="ART_DIR/FEED_JW.jpg"
+             alt="JOHNNIE WALKER — LOLLAPALOOZA 2026"
+             style="width: 100%; border-radius: 6px;">
+      </div>
+
+      <div class="modal-fixed-sidebar">
+
         <h3>JOHNNIE WALKER<br>LOLLAPALOOZA 2026</h3>
 
         <p>
@@ -78,21 +280,28 @@
            class="modal-cta-btn">
           view on instagram ↗
         </a>
-      </div>
 
+      </div>
     </div>
   </div>
 
-  <!-- MODAL 2: CIELO -->
+
+  <!-- ========================================================== -->
+  <!-- MODAL 6: CIELO -->
+  <!-- ========================================================== -->
+
   <div id="modal-cielo" class="modal-overlay" onclick="closeModal(event, 'modal-cielo')">
+
     <div class="modal-card modal-sidebar" onclick="event.stopPropagation()">
 
-      <!-- BOTÃO FECHAR -->
-      <button class="modal-close-btn" onclick="closeModal(event, 'modal-cielo')" aria-label="Close">
+      <button class="modal-close-btn"
+              onclick="closeModal(event, 'modal-cielo')"
+              aria-label="Close">
         ×
       </button>
 
       <div class="modal-media-scroll">
+
         <iframe
           src="https://www.instagram.com/p/DWH2BdwEbZx/embed"
           width="100%"
@@ -102,9 +311,11 @@
           allowtransparency="true"
           style="border: none; border-radius: 6px; background: #ffffff;">
         </iframe>
+
       </div>
 
       <div class="modal-fixed-sidebar">
+
         <h3>CIELO<br>LOLLAPALOOZA 2026</h3>
 
         <p>
@@ -116,9 +327,13 @@
         </p>
 
       </div>
-
     </div>
   </div>
+
+
+  <!-- ========================================================== -->
+  <!-- FOOTER -->
+  <!-- ========================================================== -->
 
   <footer class="site-footer">
     <a href="#top" class="back-link back-to-top">↑ back to top</a>
@@ -126,5 +341,6 @@
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
